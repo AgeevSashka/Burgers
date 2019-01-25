@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../fonts/lifehack/Lifehack Medium.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../fonts/gagalin/Gagalin-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+.header {
+  background: url(../img/main/bg.png);
+  background-size: cover;
+  height: 100vh;
+  border: 1px solid #ffffff;
+  background-color: rgba(20, 20, 20, 0.31);
+  background-color: #b0bec5;
+  margin: 0 auto;
+  position: relative; }
+  .header .header__navigation {
+    padding-top: 13px;
+    margin: 0 auto;
+    width: 940px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .header .header__navigation .header__navigation-nav {
+      -ms-flex-preferred-size: 670px;
+      flex-basis: 670px; }
+      .header .header__navigation .header__navigation-nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        .header .header__navigation .header__navigation-nav ul li {
+          list-style: none; }
+          .header .header__navigation .header__navigation-nav ul li a {
+            color: #fff;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            list-style: none;
+            text-decoration: none; }
+        .header .header__navigation .header__navigation-nav ul li:hover {
+          cursor: pointer; }
+    .header .header__navigation .header__navigation-button {
+      margin-left: 30px;
+      color: #fff;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 11px 15px 11px 16px;
+      background-color: #e45028;
+      border-radius: 5px;
+      -webkit-transition: all .6s;
+      -o-transition: all .6s;
+      transition: all .6s; }
+      .header .header__navigation .header__navigation-button:hover {
+        cursor: pointer;
+        background-color: #c1401e; }
+  .header .header__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 21px; }
+    .header .header__main .header__main-img {
+      margin-right: 12px; }
+    .header .header__main-text__title {
+      color: #f9b43b;
+      font-family: 'Gagalin';
+      font-size: 72px;
+      font-weight: 400;
+      margin-top: 56px; }
+    .header .header__main-text__subtitle {
+      color: #ffffff;
+      font-family: "Lifehack";
+      font-size: 65px;
+      font-weight: 500;
+      letter-spacing: -1.63px;
+      margin-top: 20px;
+      line-height: 60px; }
+  .header__arrow {
+    margin-top: 95px;
+    padding-bottom: 41px; }
+    .header__arrow:hover {
+      cursor: pointer; }
+    .header__arrow img {
+      display: block;
+      margin: 0 auto; }
+  .header .header__scroll {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 96px;
+    margin-right: 57px; }
+    .header .header__scroll-el {
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+      margin-bottom: 15px;
+      border-radius: 50%; }
+      .header .header__scroll-el:hover {
+        cursor: pointer; }
+
+.info {
+  background: url(../img/info/bg.png);
+  background-size: cover;
+  height: 100vh; }
+  .info__wrap {
+    width: 1104px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 133px; }
+    .info__wrap-title {
+      color: #2f3234;
+      font-family: 'Gagalin';
+      font-size: 72px;
+      font-weight: 400; }
+    .info__wrap .subtitle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin-top: 55px;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      .info__wrap .subtitle__block-img {
+        max-height: 75px; }
+      .info__wrap .subtitle__block-text__title {
+        margin-top: 34px;
+        color: #2f3234;
+        font-family: 'Lifehack';
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.6px; }
+      .info__wrap .subtitle__block-text__subtitle {
+        opacity: 0.8;
+        margin-top: 20px;
+        color: #2f3234;
+        font-family: 'Ubuntu';
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 24.02px;
+        width: 281px; }
+
+.reviews {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .reviews__block {
+    height: 50%;
+    width: 25%; }
+    .reviews__block .block__wrap {
+      opacity: 0;
+      -webkit-transition: all 0.6s;
+      -o-transition: all 0.6s;
+      transition: all 0.6s;
+      opacity: 0;
+      height: 100%; }
+    .reviews__block-title {
+      color: #ffffff;
+      font-family: 'Gagalin';
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 19px;
+      padding-top: 50px; }
+    .reviews__block-subtitle {
+      width: 222px;
+      color: #ffffff;
+      font-family: 'Ubuntu';
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 24px;
+      margin-top: 30px;
+      margin-left: 19px; }
+    .reviews__block-btn {
+      margin: 0 auto;
+      margin-left: 30px;
+      color: #fff;
+      font-family: 'Ubuntu', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 11px 15px 11px 16px;
+      background-color: #e45028;
+      border-radius: 5px;
+      -webkit-transition: all .6s;
+      -o-transition: all .6s;
+      transition: all .6s;
+      width: 110px;
+      background-color: #2f3234;
+      margin-top: 17px; }
+      .reviews__block-btn:hover {
+        cursor: pointer;
+        background-color: #c1401e; }
+      .reviews__block-btn:hover {
+        background-color: #1f2122; }
+  .reviews .block-1 {
+    background: url(../img/photos/photo-1.png);
+    background-size: cover; }
+    .reviews .block-1:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-2 {
+    background: url(../img/photos/photo-8.png);
+    background-size: cover; }
+    .reviews .block-2:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-3 {
+    background: url(../img/photos/photo-7.png);
+    background-size: cover; }
+    .reviews .block-3:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-4 {
+    background: url(../img/photos/photo-6.png);
+    background-size: cover; }
+    .reviews .block-4:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-5 {
+    background: url(../img/photos/photo-2.png);
+    background-size: cover; }
+    .reviews .block-5:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-6 {
+    background: url(../img/photos/photo-3.png);
+    background-size: cover; }
+    .reviews .block-6:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-7 {
+    background: url(../img/photos/photo-4.png);
+    background-size: cover; }
+    .reviews .block-7:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
+  .reviews .block-8 {
+    background: url(../img/photos/photo-5.png);
+    background-size: cover; }
+    .reviews .block-8:hover .block__wrap {
+      cursor: pointer;
+      opacity: 1;
+      background-color: rgba(20, 20, 20, 0.7); }
