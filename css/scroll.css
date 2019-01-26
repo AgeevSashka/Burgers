@@ -1,0 +1,16 @@
+.scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 96px;
+  margin-right: 57px; }
+  .scroll .container {
+    width: 100%; }
+    .scroll .container .scroll__el {
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+      margin-bottom: 15px;
+      border-radius: 50%; }
+      .scroll .container .scroll__el:hover {
+        cursor: pointer; }

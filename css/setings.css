@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../fonts/lifehack/Lifehack Medium.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../fonts/gagalin/Gagalin-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  height: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ul, ol, li, a, button {
+  text-decoration: none;
+  list-style: none;
+  outline: none; }
+
+.container {
+  width: 940px;
+  margin: 0 auto; }
+
+.wrapper {
+  overflow: hidden; }
+
+.scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 96px;
+  margin-right: 57px; }
+  .scroll .container {
+    width: 100%; }
+    .scroll .container .scroll__el {
+      width: 6px;
+      height: 6px;
+      background-color: #fff;
+      margin-bottom: 15px;
+      border-radius: 50%; }
+      .scroll .container .scroll__el:hover {
+        cursor: pointer; }
