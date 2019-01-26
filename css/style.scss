@@ -40,6 +40,12 @@
 		background-color: #c1401e;
 	}
 }
+body{
+	height: 100%;
+}
+.wrapper{
+	overflow: hidden;
+}
 .header{
 	background:url(../img/main/bg.png);
 	background-size: cover;

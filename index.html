@@ -13,12 +13,13 @@
     <title>Burgers</title>
   </head>
   <body>
-    <header class="header">
+    <div class="wrapper">
+		<section class="header">
 			<div class="header__wrap">
 					<div class="header__navigation">
 							<div class="header__navigation-logo"><img src="img/main/logo.png" alt="#"></div>
 								<!-- /.header__logo -->
-								<div class="header__navigation-nav">
+								<nav class="header__navigation-nav">
 									<ul>
 										<li><a href="#">о нас</a></li>
 										<li><a href="#">бургеры</a></li>
@@ -28,9 +29,9 @@
 										<li><a href="#">как мы работаем</a></li>
 										<li><a href="#">контакты</a></li>
 									</ul>
-								</div>
+								</nav>
 								<!-- /.header__nav -->
-								<div class="header__navigation-button">заказать</div>
+								<a href="#" class="header__navigation-button">заказать</a>
 								<!-- /.header__button -->
 							</div>
 							<!-- /.header__navigation -->
@@ -59,7 +60,7 @@
 								<div class="header__scroll-el"></div>
 							</div>
 			</div>
-		</header>
+		</section>
 		<section class="info">
 			<div class="info__wrap">
 				<div class="info__wrap-title">Мы лучшие</div>
@@ -237,6 +238,8 @@
 								<!-- /.reviews-block -->
 		</section>
 		<!-- /.reviews -->
+	</div>
+	<!-- /.wrapper -->
     <footer class=""></footer>
   </body>
 </html>
