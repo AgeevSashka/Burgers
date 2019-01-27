@@ -422,8 +422,7 @@ template {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      margin-right: 21px; }
+      align-items: center;}
       .main .container .greeting .greeting__img {
         margin-right: 12px; }
       .main .container .greeting .greeting__text-title {
