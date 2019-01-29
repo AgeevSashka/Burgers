@@ -1,0 +1,85 @@
+
+.reviews{
+	min-height: 650px;
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	.reviews__block{
+		height: 50vh;
+		width: 25%;
+		position: relative;
+		transition: .5s ease-in-out;
+		&:nth-child(1){
+			background: url(../img/photos/photo-1.png);
+			background-size: cover;
+		}
+		&:nth-child(2){
+			background: url(../img/photos/photo-8.png);
+			background-size: cover;
+		}
+		&:nth-child(3){
+			background: url(../img/photos/photo-7.png);
+			background-size: cover;
+		}
+		&:nth-child(4){
+			background: url(../img/photos/photo-6.png);
+			background-size: cover;
+		}
+		&:nth-child(5){
+			background: url(../img/photos/photo-2.png);
+			background-size: cover;
+		}
+		&:nth-child(6){
+			background: url(../img/photos/photo-3.png);
+			background-size: cover;
+		}
+		&:nth-child(7){
+			background: url(../img/photos/photo-4.png);
+			background-size: cover;
+		}
+		&:nth-child(8){
+			background: url(../img/photos/photo-5.png);
+			background-size: cover;
+		}
+		&:hover .reviews__text {
+			opacity: 1;
+			cursor: pointer;
+		}
+		&:hover{
+			cursor: pointer;
+			filter: grayscale(100%);
+		}
+		.reviews__text{
+			transition: .5s ease-in-out;
+			height: 255px;
+			margin-left: 19px;
+			width: 222px;
+			opacity: 0;
+			.reviews__title{
+				color: #ffffff;
+				font-family: 'Gagalin';
+				font-size: 14px;
+				font-weight: 400;
+				margin-top: 50px;
+			}
+			.reviews__subtitle{
+				color: #ffffff;
+				font-family:' Ubuntu', sans-serif;
+				font-size: 13px;
+				font-weight: 300;
+				line-height: 24px;
+				margin-top: 30px;
+			}
+			.reviews__cta{
+				@include button();
+				margin: 0;
+				background-color: #2f3234;
+				margin-top: 17px;
+				display: inline-block;
+				&:hover{
+					background-color: #1f2122;
+				}
+			}
+		}
+	}
+}
