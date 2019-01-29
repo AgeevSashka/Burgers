@@ -1,3 +1,6 @@
+html {
+  height: 100%; }
+
 @font-face {
   font-family: 'Lifehack';
   src: url("../fonts/lifehack/Lifehack Medium.otf");
