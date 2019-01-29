@@ -3,13 +3,13 @@ html {
 
 @font-face {
   font-family: 'Lifehack';
-  src: url("../fonts/lifehack/Lifehack Medium.otf");
+  src: url("../fonts/lifehack/Lifehack-Medium.woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gagalin';
-  src: url("../fonts/gagalin/Gagalin-Regular.otf");
+  src: url("../fonts/gagalin/Gagalin-Regular.woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -341,7 +341,7 @@ template {
   display: none; }
 
 .main {
-  min-height: 640px;
+  min-height: 650px;
   background: url(../img/main/bg.png);
   background-size: cover;
   height: 100vh;
@@ -365,8 +365,10 @@ template {
       justify-content: space-between; }
       .main .container .header .navigation {
         -ms-flex-preferred-size: 670px;
-        flex-basis: 670px; }
+        flex-basis: 670px;
+        padding-left: 40px; }
         .main .container .header .navigation .navigation__list {
+          padding: 0;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -425,35 +427,33 @@ template {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
-      margin-right: 21px; }
+      align-items: center; }
       .main .container .greeting .greeting__img {
         margin-right: 12px; }
-      .main .container .greeting .greeting__text-title {
-        color: #f9b43b;
-        font-family: 'Gagalin';
-        font-size: 72px;
-        font-weight: 400;
-        margin-top: 56px; }
-      .main .container .greeting .greeting__text-subtitle {
-        color: #ffffff;
-        font-family: "Lifehack";
-        font-size: 65px;
-        font-weight: 500;
-        letter-spacing: -1.63px;
-        margin-top: 20px;
-        line-height: 60px; }
+      .main .container .greeting .greeting__text {
+        padding-top: 56px; }
+        .main .container .greeting .greeting__text-title {
+          color: #f9b43b;
+          font-family: 'Gagalin';
+          font-size: 72px;
+          font-weight: 400;
+          margin-bottom: 20px; }
+        .main .container .greeting .greeting__text-subtitle {
+          color: #ffffff;
+          font-family: "Lifehack";
+          font-size: 65px;
+          font-weight: 500;
+          letter-spacing: -1.63px;
+          line-height: 60px; }
     .main .container .main__arrow {
-      margin-top: 95px;
-      padding-bottom: 41px; }
-      .main .container .main__arrow img {
-        display: block;
-        margin: 0 auto; }
+      position: absolute;
+      bottom: 10%;
+      right: 50%; }
 
 .info {
   background: url(../img/info/bg.png);
   background-size: cover;
-  min-height: 640px;
+  min-height: 650px;
   height: 100vh;
   text-align: center; }
   .info .container .info__title {
@@ -493,7 +493,7 @@ template {
       line-height: 24.07px; }
 
 .reviews {
-  min-height: 640px;
+  min-height: 650px;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,26 +503,45 @@ template {
   .reviews .reviews__block {
     height: 50vh;
     width: 25%;
-    position: relative; }
-    .reviews .reviews__block:hover img {
-      -webkit-filter: brightness(40%);
-      filter: brightness(40%);
-      cursor: pointer; }
+    position: relative;
+    -webkit-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out; }
+    .reviews .reviews__block:nth-child(1) {
+      background: url(../img/photos/photo-1.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(2) {
+      background: url(../img/photos/photo-8.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(3) {
+      background: url(../img/photos/photo-7.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(4) {
+      background: url(../img/photos/photo-6.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(5) {
+      background: url(../img/photos/photo-2.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(6) {
+      background: url(../img/photos/photo-3.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(7) {
+      background: url(../img/photos/photo-4.png);
+      background-size: cover; }
+    .reviews .reviews__block:nth-child(8) {
+      background: url(../img/photos/photo-5.png);
+      background-size: cover; }
     .reviews .reviews__block:hover .reviews__text {
       opacity: 1;
       cursor: pointer; }
-    .reviews .reviews__block img {
-      width: 100%;
-      height: 100%;
-      -webkit-transition: .5s ease-in-out;
-      -o-transition: .5s ease-in-out;
-      transition: .5s ease-in-out; }
+    .reviews .reviews__block:hover {
+      cursor: pointer;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
     .reviews .reviews__block .reviews__text {
       -webkit-transition: .5s ease-in-out;
       -o-transition: .5s ease-in-out;
       transition: .5s ease-in-out;
-      position: absolute;
-      top: 0;
       height: 255px;
       margin-left: 19px;
       width: 222px;
@@ -580,3 +599,113 @@ template {
       border-radius: 50%; }
       .scroll .container .scroll__el:hover {
         cursor: pointer; }
+
+.active h2 {
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  font-weight: 400;
+  position: relative; }
+  .active h2 span {
+    border: 4px solid transparent;
+    border-bottom: 4px solid #f9b43b;
+    position: absolute;
+    top: 20%;
+    left: -20px; }
+
+.active .list__el-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .active .list__el-info .info__text {
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    width: 208px;
+    margin-left: 20px; }
+    .active .list__el-info .info__text-title {
+      font-weight: 700;
+      margin-bottom: 5px; }
+    .active .list__el-info .info__text-subtitle {
+      font-weight: 300;
+      line-height: 24.01px;
+      font-size: 12px; }
+
+.team {
+  min-height: 650px;
+  height: 100vh;
+  width: 100%;
+  background: url(../img/team/team-bg.png);
+  background-size: cover;
+  position: relative; }
+  .team .squad {
+    position: absolute;
+    width: 49%;
+    background-color: #2f3234;
+    opacity: 0.93;
+    height: 100vh;
+    right: 0; }
+    .team .squad__wrap {
+      width: 347px;
+      margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 100vh; }
+      .team .squad__wrap .squad__title {
+        color: #f9b43b;
+        font-family: 'Gagalin';
+        font-size: 72px;
+        font-weight: 400;
+        margin-bottom: 46px; }
+      .team .squad__wrap .squad__subtitle {
+        line-height: 28.13px; }
+        .team .squad__wrap .squad__subtitle .squad__list .list__el h2 {
+          color: #ffffff;
+          font-family: 'Gagalin';
+          font-size: 14px;
+          font-weight: 400;
+          position: relative; }
+          .team .squad__wrap .squad__subtitle .squad__list .list__el h2 span {
+            border: 4px solid transparent;
+            border-top: 4px solid #f9b43b;
+            position: absolute;
+            top: 40%;
+            left: -20px; }
+        .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          display: none; }
+          .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text {
+            color: #ffffff;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 13px;
+            width: 208px;
+            margin-left: 20px; }
+            .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text-title {
+              font-weight: 700;
+              margin-bottom: 5px; }
+            .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text-subtitle {
+              font-weight: 300;
+              line-height: 24.01px;
+              font-size: 12px; }
