@@ -1,0 +1,109 @@
+.active h2 {
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: 14px;
+  font-weight: 400;
+  position: relative; }
+  .active h2 span {
+    border: 4px solid transparent;
+    border-bottom: 4px solid #f9b43b;
+    position: absolute;
+    top: 20%;
+    left: -20px; }
+
+.active .list__el-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .active .list__el-info .info__text {
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    width: 208px;
+    margin-left: 20px; }
+    .active .list__el-info .info__text-title {
+      font-weight: 700;
+      margin-bottom: 5px; }
+    .active .list__el-info .info__text-subtitle {
+      font-weight: 300;
+      line-height: 24.01px;
+      font-size: 12px; }
+
+.team {
+  min-height: 650px;
+  height: 100vh;
+  width: 100%;
+  background: url(../img/team/team-bg.png);
+  background-size: cover;
+  position: relative; }
+  .team .squad {
+    position: absolute;
+    width: 49%;
+    background-color: #2f3234;
+    opacity: 0.93;
+    height: 100vh;
+    right: 0; }
+    .team .squad__wrap {
+      width: 347px;
+      margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 100vh; }
+      .team .squad__wrap .squad__title {
+        color: #f9b43b;
+        font-family: 'Gagalin';
+        font-size: 72px;
+        font-weight: 400;
+        margin-bottom: 46px; }
+      .team .squad__wrap .squad__subtitle {
+        line-height: 28.13px; }
+        .team .squad__wrap .squad__subtitle .squad__list .list__el h2 {
+          color: #ffffff;
+          font-family: 'Gagalin';
+          font-size: 14px;
+          font-weight: 400;
+          position: relative; }
+          .team .squad__wrap .squad__subtitle .squad__list .list__el h2 span {
+            border: 4px solid transparent;
+            border-top: 4px solid #f9b43b;
+            position: absolute;
+            top: 40%;
+            left: -19px; }
+        .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          display: none; }
+          .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text {
+            color: #ffffff;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 13px;
+            width: 208px;
+            margin-left: 20px; }
+            .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text-title {
+              font-weight: 700;
+              margin-bottom: 5px; }
+            .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text-subtitle {
+              font-weight: 300;
+              line-height: 24.01px;
+              font-size: 12px; }

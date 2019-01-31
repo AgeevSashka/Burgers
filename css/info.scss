@@ -1,16 +1,20 @@
 .info{
     background: url(../img/info/bg.png);
     background-size: cover;
-    min-height: 640px;
+    min-height: 650px;
     height: 100vh;
     text-align: center;
-    .container{
+    display: flex;
+    .info__wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .info__title{
             color: #2f3234;
             font-family: 'Gagalin';
             font-size: 72px;
-            font-weight: 400;
-            padding-top: 133px;   
+            font-weight: 400; 
+            margin-bottom: 20px; 
         }
         .subtitle{
             display: flex;
@@ -19,7 +23,6 @@
             padding: 0;
             .subtitle__block-img{
                 max-height: 75px;
-                padding-top: 53px;
             }
             .subtitle__text{
                 h2{

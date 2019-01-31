@@ -1,6 +1,6 @@
 
 .main{
-	min-height: 640px;
+	min-height: 650px;
 	background:url(../img/main/bg.png);
 	background-size: cover;
 	height: 100vh;
@@ -16,9 +16,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			&__logo{
+				margin-right: 40px;
+			}
 			.navigation{
 				flex-basis: 670px;
 				.navigation__list{
+					padding: 0;
 					display: flex;
 					width: 100%;
 					justify-content: space-between;
@@ -67,12 +71,13 @@
 				margin-right: 12px;		
 			}
 			.greeting__text{
+				padding-top: 56px;
 				&-title{
 						color: #f9b43b;
 						font-family: 'Gagalin';
 						font-size: 72px;
 						font-weight: 400;
-						margin-top: 56px;
+						margin-bottom: 20px;
 				}
 				&-subtitle{
 						color: #ffffff;
@@ -80,19 +85,15 @@
 						font-size: 65px;
 						font-weight: 500;
 						letter-spacing: -1.63px;
-						margin-top: 20px;
 						line-height: 60px;
 				}
 			}
 		}
 	
 		.main__arrow{
-			margin-top: 95px;
-			padding-bottom: 41px;
-			img{
-				display: block;
-				margin: 0 auto;
-			}
+				position: absolute;
+				bottom: 10%;
+				right: 50%;
 		}
 	}
 }
