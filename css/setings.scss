@@ -7,6 +7,8 @@ html{
 
 	src: url('../fonts/lifehack/Lifehack-Medium.woff');
 
+	src: url('../fonts/lifehack/Lifehack-Medium.woff2');
+
 	font-weight: normal;
 
 	font-style: normal;
@@ -17,6 +19,8 @@ html{
 	font-family: 'Gagalin';
 
 	src: url('../fonts/gagalin/Gagalin-Regular.woff');
+
+	src: url('../fonts/gagalin/Gagalin-Regular.woff2');
 
 	font-weight: normal;
 
@@ -61,4 +65,8 @@ ul, ol, li, a, button{
 	margin: 0 auto;}
 .wrapper{
 	overflow: hidden;
+}
+.section{
+	min-height: 650px;
+	height: 100vh;
 }

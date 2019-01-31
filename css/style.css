@@ -4,12 +4,14 @@ html {
 @font-face {
   font-family: 'Lifehack';
   src: url("../fonts/lifehack/Lifehack-Medium.woff");
+  src: url("../fonts/lifehack/Lifehack-Medium.woff2");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Gagalin';
   src: url("../fonts/gagalin/Gagalin-Regular.woff");
+  src: url("../fonts/gagalin/Gagalin-Regular.woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -30,6 +32,10 @@ ul, ol, li, a, button {
 
 .wrapper {
   overflow: hidden; }
+
+.section {
+  min-height: 650px;
+  height: 100vh; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -363,10 +369,11 @@ template {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; }
+      .main .container .header__logo {
+        margin-right: 40px; }
       .main .container .header .navigation {
         -ms-flex-preferred-size: 670px;
-        flex-basis: 670px;
-        padding-left: 40px; }
+        flex-basis: 670px; }
         .main .container .header .navigation .navigation__list {
           padding: 0;
           display: -webkit-box;
@@ -455,42 +462,55 @@ template {
   background-size: cover;
   min-height: 650px;
   height: 100vh;
-  text-align: center; }
-  .info .container .info__title {
-    color: #2f3234;
-    font-family: 'Gagalin';
-    font-size: 72px;
-    font-weight: 400;
-    padding-top: 133px; }
-  .info .container .subtitle {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .info .info__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    padding: 0; }
-    .info .container .subtitle .subtitle__block-img {
-      max-height: 75px;
-      padding-top: 53px; }
-    .info .container .subtitle .subtitle__text h2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .info .info__wrap .info__title {
       color: #2f3234;
-      font-family: 'Lifehack';
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 28.14px;
-      letter-spacing: -0.6px; }
-    .info .container .subtitle .subtitle__text h3 {
-      width: 284px;
-      opacity: 0.8;
-      color: #2f3234;
-      font-family: 'Ubuntu';
-      font-size: 13px;
-      font-weight: 300;
-      line-height: 24.07px; }
+      font-family: 'Gagalin';
+      font-size: 72px;
+      font-weight: 400;
+      margin-bottom: 20px; }
+    .info .info__wrap .subtitle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding: 0; }
+      .info .info__wrap .subtitle .subtitle__block-img {
+        max-height: 75px; }
+      .info .info__wrap .subtitle .subtitle__text h2 {
+        color: #2f3234;
+        font-family: 'Lifehack';
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28.14px;
+        letter-spacing: -0.6px; }
+      .info .info__wrap .subtitle .subtitle__text h3 {
+        width: 284px;
+        opacity: 0.8;
+        color: #2f3234;
+        font-family: 'Ubuntu';
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 24.07px; }
 
 .reviews {
   min-height: 650px;
@@ -585,20 +605,29 @@ template {
 
 .scroll {
   position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 96px;
-  margin-right: 57px; }
+  top: 96px;
+  right: 57px; }
   .scroll .container {
     width: 100%; }
-    .scroll .container .scroll__el {
-      width: 6px;
-      height: 6px;
-      background-color: #fff;
-      margin-bottom: 15px;
-      border-radius: 50%; }
-      .scroll .container .scroll__el:hover {
-        cursor: pointer; }
+    .scroll .container .scroll__menu {
+      padding: 0; }
+      .scroll .container .scroll__menu .scroll__el {
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        position: relative; }
+        .scroll .container .scroll__menu .scroll__el:first-child:before {
+          content: '';
+          top: -4px;
+          right: -4px;
+          width: 12px;
+          height: 12px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          display: block;
+          position: absolute; }
 
 .active h2 {
   color: #f9b43b;
@@ -700,7 +729,7 @@ template {
             color: #ffffff;
             font-family: 'Ubuntu', sans-serif;
             font-size: 13px;
-            width: 208px;
+            width: 207px;
             margin-left: 20px; }
             .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info .info__text-title {
               font-weight: 700;

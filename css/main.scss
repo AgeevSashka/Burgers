@@ -16,9 +16,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			&__logo{
+				margin-right: 40px;
+			}
 			.navigation{
 				flex-basis: 670px;
-				padding-left: 40px;
 				.navigation__list{
 					padding: 0;
 					display: flex;
