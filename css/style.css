@@ -631,7 +631,7 @@ ul, ol, li, a, button {
           width: 67%;
           margin: 0 auto; } }
       .reviews .reviews__block .reviews__text .reviews__title {
-        color: #ffffff;
+        color: #fff;
         font-family: 'Gagalin';
         font-size: 0.93333rem;
         font-weight: 400;
