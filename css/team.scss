@@ -1,42 +1,6 @@
-.active{
-    h2{
-        color: #f9b43b;
-        font-family: 'Gagalin';
-        font-size : 14px;
-        font-weight: 400;
-        position: relative;
-        span{
-            border: 4px solid transparent;	
-            border-bottom: 4px solid #f9b43b;
-            position: absolute;
-            top: 20%;
-            left: -20px; 
-        }
-    }
-    .list__el-info{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .info__text{
-            color: #ffffff;
-            font-family: 'Ubuntu', sans-serif;
-            font-size: 13px;
-            width: 208px;
-            margin-left: 20px;
-            &-title{
-                font-weight: 700;
-                margin-bottom: 5px;
-            }
-            &-subtitle{
-                font-weight: 300;
-                line-height: 24.01px;
-                font-size: 12px;
-            }
-        }
-    } 
-}
+
 .team{
-    min-height: 650px;
+    min-height: rem(650px);
     height: 100vh;
     width: 100%;
     background: url(../img/team/team-bg.png);
@@ -49,8 +13,12 @@
         opacity: 0.93;
         height: 100vh;
         right: 0;
+        @include tablets(){
+            width: 100%;
+            text-align: center;
+        }
         &__wrap{
-            width: 347px;
+            width: rem(347px);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -59,47 +27,63 @@
             .squad__title{
                 color: #f9b43b;
                 font-family: 'Gagalin';
-                font-size: 72px;
+                font-size: rem(72px);
                 font-weight: 400;
-                margin-bottom: 46px;
+                margin-bottom: rem(46px);
             }
             .squad__subtitle{
-                line-height: 28.13px;
+                line-height: rem(28.13px);
                 .squad__list{
                     .list__el{
                         h2{
                             color: #ffffff;
                             font-family: 'Gagalin';
-                            font-size : 14px;
+                            font-size : rem(14px);
                             font-weight: 400;
                             position: relative;
+                            @include phones(){
+                                font-size: 25px;
+                                font-weight: 400;
+                            }
                             span{
-                                border: 4px solid transparent;	
-                                border-top: 4px solid #f9b43b;
+                                border: rem(10px) solid transparent;	
+                                border-top: rem(10px) solid #f9b43b;
                                 position: absolute;
                                 top: 40%;
-                                left: -19px; 
+                                left: rem(-19px); 
                             }
+                        }
+                        .active{
+                            height: 20%;
                         }
                         .list__el-info{
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            display: none;
+                            height: 0;
+                            overflow: hidden;
+                            @include tablets(){
+                                flex-direction: column;
+                            }
+                            
                             .info__text{
                                 color: #ffffff;
                                 font-family: 'Ubuntu', sans-serif;
-                                font-size: 13px;
-                                width: 207px;
-                                margin-left: 20px;
+                                font-size: rem(13px);
+                                width: rem(207px);
+                                margin-left: rem(20px);
+                                @include tablets(){
+                                    width: 100%;
+                                    margin-left: 0;
+                                }
                                 &-title{
                                     font-weight: 700;
-                                    margin-bottom: 5px;
+                                    margin-bottom: rem(5px);
                                 }
                                 &-subtitle{
                                     font-weight: 300;
-                                    line-height: 24.01px;
-                                    font-size: 12px;
+                                    line-height: rem(24.01px);
+                                    font-size: rem(12px);
                                 }
                             }
                         }

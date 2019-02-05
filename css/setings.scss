@@ -1,5 +1,14 @@
+
 html{
+	@include tablets() {
+		font-size: 14px;
+	}
+
+	@include phones() {
+		font-size: 12px;
+	}
 	height: 100%;
+	font-size: 16px; 
 }
 @font-face{
 
@@ -27,21 +36,18 @@ html{
 	font-style: normal;
 
 }
-@mixin container{
-	width: 1104px;
-	margin: 0 auto;
-}
 @mixin button(){
-	margin-left: 30px;
+	border: none;
+	margin-left: rem(30px);
 	text-decoration: none;
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 13px;
+	font-size: rem(13px);
 	font-weight: 500;
 	text-transform: uppercase;
-	padding: 11px 15px 11px 16px;
+	padding: rem(11px) rem(15px) rem(11px) rem(16px);
 	background-color: #e45028;
-	border-radius: 5px;
+	border-radius: rem(5px);
 	transition: all .6s;
 	&:hover{
 		cursor: pointer;
@@ -61,12 +67,15 @@ ul, ol, li, a, button{
 	outline: none;
 }
 .container{
-	width: 940px;
+	max-width: 90%; 
 	margin: 0 auto;}
 .wrapper{
 	overflow: hidden;
 }
 .section{
-	min-height: 650px;
+	min-height: rem(650px);
 	height: 100vh;
+	@include tablets(){
+		min-height: rem(1024px);
+	}
 }

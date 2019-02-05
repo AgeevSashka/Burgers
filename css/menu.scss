@@ -1,0 +1,145 @@
+.menu{
+    background: url(../img/menu/menu-bg.png);
+    background-size: cover;
+    position: relative;
+    .menu__wrap{
+
+        .menu__title{
+            color: #ffffff;
+            font-family: 'Gagalin';
+            font-size: rem(72px);
+            font-weight: 400;
+            top: rem(111px);
+            left: 5%; 
+            position: relative;
+        }
+        .menu__items{
+            display: flex;
+            position: absolute;
+            right: 0;
+            top:0;
+            .item__block{
+                display: flex;
+                align-items: flex-end;
+                &:nth-child(1){
+                    .block__title{
+                        background: url(../img/menu/menu-thrid.png);
+                        background-size: cover;
+                        height: 100vh;
+                        &:before{
+                            content: '';
+                            height: 100vh;
+                            width: 100%;
+                            display: block;
+                            background-color: rgba(20, 20, 20, 0.7);
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            z-index: -1;
+                        }
+                    }
+                    position: relative;
+                    &:before{
+                        content: '';
+                        height: 100vh;
+                        width: 100%;
+                        display: block;
+                        background-color: #2f3234;
+                        opacity: 0.93;
+                        position: absolute;
+                        top: 0;
+                    }
+                }
+                &:nth-child(2){
+                    .block__title{
+                        background: url(../img/menu/menu-first.png);
+                        background-size: cover;
+                        height: 100vh;
+                        &:before{
+                            content: '';
+                            height: 100vh;
+                            width: 100%;
+                            display: block;
+                            background-color: rgba(20, 20, 20, 0.7);
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            z-index: -1;
+                        }
+                    }
+                    position: relative;
+                    &:before{
+                        content: '';
+                        height: 100vh;
+                        width: 100%;
+                        display: block;
+                        background-color: rgba(20, 20, 20, 0.7);
+                        position: absolute;
+                    }
+                }
+                &:nth-child(3){
+                    .block__title{
+                        background: url(../img/menu/menu-sec.png);
+                        background-size: cover;
+                        height: 100vh;
+                        &:before{
+                            content: '';
+                            height: 100vh;
+                            width: 100%;
+                            display: block;
+                            background-color: rgba(20, 20, 20, 0.7);
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            z-index: -1;
+                        }
+                    }
+                    position: relative;
+                    &:before{
+                        content: '';
+                        height: 100vh;
+                        width: 100%;
+                        display: block;
+                        background-color: rgba(20, 20, 20, 0.7);
+                        position: absolute;
+                    }
+                }
+                .block__title{
+                    color: #ffffff;
+                    font-family: 'Gagalin';
+                    font-size: rem(40px);
+                    font-weight: 400;
+                     writing-mode:tb-rl;
+                     transform: rotate(180deg);
+                     padding:rem(40px) rem(23px) 0 rem(23px);
+                     p{
+                         margin: 0;
+                     }
+                }
+                .block__subtitle{
+                    overflow: hidden;
+                    width: 0;
+                    z-index: 9;
+                    height: 95vh;
+                    color: #ffffff;
+                    font-family: 'Ubuntu';
+                    font-size: rem(14px);
+                    font-weight: 300;
+                    line-height: rem(24px);
+                    p{
+                        padding-top: rem(32px);
+                        padding-right: rem(33px);
+                        padding-left: rem(33px);
+                    }
+                }
+                .active{
+                    width: 45vw;
+                    @include tablets(){
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}

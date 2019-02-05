@@ -1,7 +1,7 @@
 .info{
     background: url(../img/info/bg.png);
     background-size: cover;
-    min-height: 650px;
+    min-height: rem(650px);
     height: 100vh;
     text-align: center;
     display: flex;
@@ -12,35 +12,54 @@
         .info__title{
             color: #2f3234;
             font-family: 'Gagalin';
-            font-size: 72px;
+            font-size: rem(72px);
             font-weight: 400; 
-            margin-bottom: 20px; 
+            margin-bottom: rem(20px); 
         }
         .subtitle{
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             padding: 0;
-            .subtitle__block-img{
-                max-height: 75px;
+            @include phones(){
+                flex-direction: column;
             }
-            .subtitle__text{
-                h2{
-                    color: #2f3234;
-                    font-family: 'Lifehack';
-                    font-size: 24px;
-                    font-weight: 500;
-                    line-height: 28.14px;
-                    letter-spacing: -0.6px;
+            .subtitle__block{
+                @include phones(){
+                    display:flex;
+                    text-align: left;
+                    align-items: center;
                 }
-                h3{
-                    width: 284px;
-                    opacity: 0.8;
-                    color: #2f3234;
-                    font-family: 'Ubuntu';
-                    font-size: 13px;
-                    font-weight: 300;
-                    line-height: 24.07px;
+                .subtitle__block-img{
+                    max-height: rem(75px);
+                    img{
+                        @include phones(){
+                            max-width: rem(73px);
+                            margin-right: rem(40px);
+                        }
+                    }
+                }
+                .subtitle__text{
+                    h2{
+                        color: #2f3234;
+                        font-family: 'Lifehack';
+                        font-size: rem(24px);
+                        font-weight: 500;
+                        line-height: rem(28.14px);
+                        letter-spacing: rem(-0.6px);
+                    }
+                    h3{
+                        width: 100%;
+                        opacity: 0.8;
+                        color: #2f3234;
+                        font-family: 'Ubuntu';
+                        font-size: rem(14px);
+                        font-weight: 300;
+                        line-height: rem(24.07px);
+                        @include phones(){
+
+                        }
+                    }
                 }
             }
         }
