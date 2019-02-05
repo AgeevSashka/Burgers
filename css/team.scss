@@ -46,11 +46,15 @@
                                 font-weight: 400;
                             }
                             span{
-                                border: rem(10px) solid transparent;	
-                                border-top: rem(10px) solid #f9b43b;
+                                border: rem(4px) solid transparent;	
+                                border-top: rem(4px) solid #f9b43b;
                                 position: absolute;
                                 top: 40%;
-                                left: rem(-19px); 
+                                left: rem(-19px);
+                                @include phones(){
+                                    border: rem(10px) solid transparent;	
+                                    border-top: rem(10px) solid #f9b43b; 
+                                } 
                             }
                         }
                         .active{

@@ -751,11 +751,15 @@ ul, ol, li, a, button {
               font-size: 25px;
               font-weight: 400; } }
           .team .squad__wrap .squad__subtitle .squad__list .list__el h2 span {
-            border: 0.66667rem solid transparent;
-            border-top: 0.66667rem solid #f9b43b;
+            border: 0.26667rem solid transparent;
+            border-top: 0.26667rem solid #f9b43b;
             position: absolute;
             top: 40%;
             left: -1.26667rem; }
+            @media screen and (max-width: 480px) {
+              .team .squad__wrap .squad__subtitle .squad__list .list__el h2 span {
+                border: 0.66667rem solid transparent;
+                border-top: 0.66667rem solid #f9b43b; } }
         .team .squad__wrap .squad__subtitle .squad__list .list__el .active {
           height: 20%; }
         .team .squad__wrap .squad__subtitle .squad__list .list__el .list__el-info {
