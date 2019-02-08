@@ -12,24 +12,22 @@
             font-family: 'Gagalin';
             font-size: rem(72px);
             font-weight: 400;
+            margin-bottom: rem(44px);
             @include tablets() {
                 text-align: center;
             }
-        }
-        .form__inputs{
-            margin-top: rem(44px);
-            width: 100%;
-            @include tablets() {
-                width: 60%;
-            }
-            @include phones() {
-                width: 100%;
-            }
-
+        } 
             form{
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
+                width: 100%;
+                @include tablets() {
+                    width: 70%;
+                }
+                @include phones() {
+                    width: 100%;
+                }
                 .form__block{
                     height: rem(260px);
                     &:nth-child(1){
@@ -140,11 +138,13 @@
                                 }
                             }
                             &:nth-child(2){
-                                width: 36%;
+                                width: 50%;
+                                max-width: rem(155px);
                                 flex-direction: row-reverse;
                                 align-items: center;
                                 justify-content: space-between;
                                 margin-right: rem(22px);
+                                margin-bottom: rem(29px);
                                 label{
                                     display: flex;
                                     input+span{
@@ -175,10 +175,12 @@
                                 }
                             }
                             &:nth-child(3){
-                                width: 30%;
+                                width: 50%;
+                                max-width: rem(140px);
                                 flex-direction: row-reverse;
                                 align-items: center;
                                 justify-content: space-between;
+                                margin-bottom: rem(29px);
                                 label{
                                     display: flex;
                                     input+span{
@@ -213,9 +215,8 @@
                                 flex-direction: row-reverse;
                                 align-items: center;
                                 justify-content: flex-end;
-                                margin-top: rem(29px);
                                 margin-bottom: rem(20px);
-                                @include phones(){
+                                @include tablets(){
                                     justify-content: center;
                                 }
                                 label{
@@ -269,5 +270,4 @@
                 }
             }
         }
-    }
 }

@@ -34,7 +34,13 @@
             .squad__subtitle{
                 line-height: rem(28.13px);
                 .squad__list{
+                    .active{
+                            height: 20%;
+                        }
                     .list__el{
+                        &:hover{
+                            cursor: pointer;
+                        }
                         h2{
                             color: #ffffff;
                             font-family: 'Gagalin';
@@ -50,15 +56,12 @@
                                 border-top: rem(4px) solid #f9b43b;
                                 position: absolute;
                                 top: 40%;
-                                left: rem(-19px);
-                                @include phones(){
+                                left: rem(-19px); 
+                                @include tablets(){
                                     border: rem(10px) solid transparent;	
                                     border-top: rem(10px) solid #f9b43b; 
-                                } 
+                                }
                             }
-                        }
-                        .active{
-                            height: 20%;
                         }
                         .list__el-info{
                             display: flex;

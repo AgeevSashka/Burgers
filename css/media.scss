@@ -2,10 +2,16 @@
   @return $px / 15px + 0rem;
 }
 
-
+$notes:992px;
 $tablets: 768px;
 $phones: 480px;
 
+
+@mixin notes() {
+  @media screen and (max-width: $notes) {
+    @content;
+  }
+}
 @mixin tablets() {
   @media screen and (max-width: $tablets) {
     @content;
