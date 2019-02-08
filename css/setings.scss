@@ -1,11 +1,22 @@
+
 html{
+	@include tablets() {
+		font-size: 14px;
+	}
+
+	@include phones() {
+		font-size: 12px;
+	}
 	height: 100%;
+	font-size: 16px; 
 }
 @font-face{
 
 	font-family: 'Lifehack';
 
 	src: url('../fonts/lifehack/Lifehack-Medium.woff');
+
+	src: url('../fonts/lifehack/Lifehack-Medium.woff2');
 
 	font-weight: normal;
 
@@ -18,26 +29,24 @@ html{
 
 	src: url('../fonts/gagalin/Gagalin-Regular.woff');
 
+	src: url('../fonts/gagalin/Gagalin-Regular.woff2');
+
 	font-weight: normal;
 
 	font-style: normal;
 
 }
-@mixin container{
-	width: 1104px;
-	margin: 0 auto;
-}
 @mixin button(){
-	margin-left: 30px;
+	border: none;
 	text-decoration: none;
 	color: #fff;
 	font-family: 'Ubuntu', sans-serif;
-	font-size: 13px;
+	font-size: rem(13px);
 	font-weight: 500;
 	text-transform: uppercase;
-	padding: 11px 15px 11px 16px;
+	padding: rem(11px) rem(15px) rem(11px) rem(16px);
 	background-color: #e45028;
-	border-radius: 5px;
+	border-radius: rem(5px);
 	transition: all .6s;
 	&:hover{
 		cursor: pointer;
@@ -57,8 +66,16 @@ ul, ol, li, a, button{
 	outline: none;
 }
 .container{
-	width: 940px;
+    width: 95%;
+	max-width: 1103px; 
 	margin: 0 auto;}
 .wrapper{
 	overflow: hidden;
+}
+.section{
+	min-height: rem(650px);
+	height: 100vh;
+	@include tablets(){
+		min-height: rem(1024px);
+	}
 }
