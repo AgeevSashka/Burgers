@@ -66,8 +66,8 @@ ul, ol, li, a, button{
 	outline: none;
 }
 .container{
-    width: 95%;
-	max-width: 1103px; 
+    width: 90%;
+	max-width: 940px; 
 	margin: 0 auto;}
 .wrapper{
 	overflow: hidden;
@@ -78,4 +78,9 @@ ul, ol, li, a, button{
 	@include tablets(){
 		min-height: rem(1024px);
 	}
+}
+.title{
+    font-family: 'Gagalin';
+    font-size: rem(72px);
+    font-weight: 400;
 }
