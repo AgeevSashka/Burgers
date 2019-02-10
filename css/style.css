@@ -669,6 +669,19 @@ ul, ol, li, a, button {
         .reviews .reviews__block .reviews__text {
           width: 85%;
           margin: 0 auto; } }
+      @media screen and (max-width: 480px) {
+        .reviews .reviews__block .reviews__text {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          max-width: 120px; } }
       .reviews .reviews__block .reviews__text .reviews__title {
         color: #ffffff;
         font-family: 'Gagalin';
@@ -678,6 +691,9 @@ ul, ol, li, a, button {
         @media screen and (max-width: 768px) {
           .reviews .reviews__block .reviews__text .reviews__title {
             margin-top: 2.33333rem; } }
+        @media screen and (max-width: 480px) {
+          .reviews .reviews__block .reviews__text .reviews__title {
+            margin-top: 0; } }
       .reviews .reviews__block .reviews__text .reviews__subtitle {
         color: #ffffff;
         font-family: ' Ubuntu', sans-serif;
@@ -685,6 +701,9 @@ ul, ol, li, a, button {
         font-weight: 300;
         line-height: 1.6rem;
         margin-top: 2rem; }
+        @media screen and (max-width: 480px) {
+          .reviews .reviews__block .reviews__text .reviews__subtitle {
+            display: none; } }
       .reviews .reviews__block .reviews__text .reviews__cta {
         border: none;
         text-decoration: none;
@@ -1306,6 +1325,9 @@ ul, ol, li, a, button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+  @media screen and (max-width: 480px) {
+    .footer__contacts {
+      width: 100%; } }
   .footer__contacts p {
     padding: 0;
     margin: 0;
@@ -1314,40 +1336,69 @@ ul, ol, li, a, button {
     font-size: 0.93333rem;
     font-weight: 300;
     margin-bottom: 0.66667rem; }
-  .footer__contacts a {
-    color: #e45028;
+  .footer__contacts span {
     font-family: 'Ubuntu';
     font-size: 0.93333rem;
-    font-weight: 700; }
-    .footer__contacts a img {
-      vertical-align: middle;
-      margin-right: 0.66667rem; }
+    font-weight: 700;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media screen and (max-width: 480px) {
+      .footer__contacts span {
+        width: 30%;
+        margin: 0 auto; } }
+    .footer__contacts span a {
+      color: #e45028;
+      text-decoration: none; }
+    .footer__contacts span .phone {
+      fill: #e45028;
+      width: 20px;
+      height: 20px; }
 
 .footer__socials {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 14.5%; }
+  display: flex; }
   @media screen and (max-width: 480px) {
     .footer__socials {
-      width: 20%;
-      margin: 0 auto; } }
-  .footer__socials a {
-    height: 20px; }
-    .footer__socials a .vk {
-      width: 20px;
-      height: 20px; }
-    .footer__socials a img {
-      max-width: 1.33333rem;
-      max-height: 1.33333rem;
-      min-height: 0.86667rem; }
-      .footer__socials a img:hover {
-        -webkit-filter: brightness(100%);
-        filter: brightness(100%); }
+      width: 100%; } }
+  .footer__socials .social__list {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 14.5%;
+    padding: 0; }
+    @media screen and (max-width: 480px) {
+      .footer__socials .social__list {
+        width: 50%;
+        margin: 0 auto; } }
+    .footer__socials .social__list list__el {
+      max-height: 20px;
+      max-width: 20px; }
+
+.vk, .fb, .tw, .inst {
+  fill: #fff;
+  height: 30px;
+  width: 30px;
+  opacity: 0.3;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s; }
+  .vk:hover, .fb:hover, .tw:hover, .inst:hover {
+    opacity: 1;
+    cursor: pointer; }
