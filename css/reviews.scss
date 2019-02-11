@@ -63,56 +63,56 @@
 			cursor: pointer;
 			filter: grayscale(100%);  
 		}
-		.reviews__text{
-			transition: .5s ease-in-out;
-			height: rem(255px);
-			margin-left: rem(19px);
-			width: rem(222px);
-			opacity: 0;
-			@include tablets(){
-				width: 85%;
-				margin: 0 auto;
-			}
-            @include phones(){
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    max-width: 120px;
-                }
-			.reviews__title{
-				color: #ffffff;
-				font-family: 'Gagalin';
-				font-size: rem(14px);
-				font-weight: 400;
-				margin-top: rem(50px);
-				@include tablets(){
-					margin-top: 2.33333rem;
-				}
-                @include phones(){
-					margin-top: 0;
-				}
-			}
-			.reviews__subtitle{
-				color: #ffffff;
-				font-family:' Ubuntu', sans-serif;
-				font-size: rem(13px);
-				font-weight: 300;
-				line-height: rem(24px);
-				margin-top: rem(30px);
-                @include phones(){
-                    display: none;
-                }
-			}
-			.reviews__cta{
-				@include button();
-				margin: 0;
-				background-color: #2f3234;
-				margin-top: rem(17px);
-				display: inline-block;
-				&:hover{
-					background-color: #1f2122;
-				}
-			}
+	}
+}
+.reviews__text{
+	transition: .5s ease-in-out;
+	height: rem(255px);
+	margin-left: rem(19px);
+	width: rem(222px);
+	opacity: 0;
+	@include tablets(){
+		width: 85%;
+		margin: 0 auto;
+	}
+	@include phones(){
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 120px;
+		}
+	.reviews__title{
+		color: #ffffff;
+		font-family: 'Gagalin';
+		font-size: rem(14px);
+		font-weight: 400;
+		margin-top: rem(50px);
+		@include tablets(){
+			margin-top: 2.33333rem;
+		}
+		@include phones(){
+			margin-top: 0;
+		}
+	}
+	.reviews__subtitle{
+		color: #ffffff;
+		font-family:' Ubuntu', sans-serif;
+		font-size: rem(13px);
+		font-weight: 300;
+		line-height: rem(24px);
+		margin-top: rem(30px);
+		@include phones(){
+			display: none;
+		}
+	}
+	.reviews__cta{
+		@include button();
+		margin: 0;
+		background-color: #2f3234;
+		margin-top: rem(17px);
+		display: inline-block;
+		&:hover{
+			background-color: #1f2122;
 		}
 	}
 }

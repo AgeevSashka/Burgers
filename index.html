@@ -11,13 +11,13 @@
 
     <title>Burgers</title>
   </head>
-  <body>
+  <body> 
     <div class="wrapper">
 		<section class="main section">
 			<div class="main__wrap container">
 					<header class="header">
 							<div class="header__logo"><img src="img/main/logo.png" alt="#"></div>
-								<!-- /.header__logo -->
+								<!-- /.header__logo --> 
 								<nav class="navigation">
 									<ul class="navigation__list">
 										<li class="navigation__el"><a href="#">о нас</a></li>
@@ -30,8 +30,15 @@
 									</ul>
 								</nav>
 								<!-- /.navigation -->
-								<button class="navigation__button">заказать</button>
-								<!-- /.navigation__button -->
+								<div class="header__btn">
+									<button class="navigation__button">заказать</button>
+									<!-- /.navigation__button -->
+									<div class="burger">
+										<a href="#" class="menu-btn">
+										  <span></span>
+										</a>
+									</div>
+								</div>
 					</header>
 							<!-- /.header -->
 							<div class="greeting">
@@ -179,7 +186,7 @@
             <ul class="menu-acco">
                 <li class="acco-item"> 
                     <a href="" class="item__trigger"><span class="item__text">Для мясоедов</span></a>
-                    <div class="acco-content active" style="width: 460px;@include tablets(){width: 100%;}">
+                    <div class="acco-content active">
                         <div class="acco-content__text">
                             Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
                         </div>
@@ -315,33 +322,37 @@
 				<div class="form__title title">Закажите доставку</div>
 					<form action="POST" class="main-form">
 						<div class="form__block block-left">
-							<div class="block__el-left">
-								<label for="name">Имя</label>
-								<input type="text" name="name" required>
+							<div class="left__first">
+								<div class="block__el-left">
+									<label for="name">Имя</label>
+									<input type="text" name="name" required>
+								</div>
+								<div class="block__el-left">
+									<label for="tel">Телефон</label>
+									<input type="tel" name="tel" required>
+								</div>
 							</div>
-							<div class="block__el-left">
-								<label for="tel">Телефон</label>
-								<input type="tel" name="tel" required>
-							</div>
-							<div class="block__el-left">
+							<div class="block__el-left sec">
 								<label for="square">Улица</label>
 								<input type="text" name="square" required>
 							</div>
-							<div class="block__el-left">
-								<label for="home">Дом</label >
-								<input type="text" name="home" required>
-							</div>
-							<div class="block__el-left">
-								<label for="housing">Корпус</label>
-								<input type="number" name="housing" required>
-							</div>
-							<div class="block__el-left">
-								<label for="apartment">Квартира</label>
-								<input type="number" name="apartment" required>
-							</div>
-							<div class="block__el-left">
-								<label for="floor">Этаж</label>
-								<input type="number" name="floor" required>
+							<div class="left__sec">
+								<div class="block__el-left">
+									<label for="home">Дом</label >
+									<input type="text" name="home" required>
+								</div>
+								<div class="block__el-left">
+									<label for="housing">Корпус</label>
+									<input type="number" name="housing" required>
+								</div>
+								<div class="block__el-left">
+									<label for="apartment">Квартира</label>
+									<input type="number" name="apartment" required>
+								</div>
+								<div class="block__el-left">
+									<label for="floor">Этаж</label>
+									<input type="number" name="floor" required>
+								</div>
 							</div>
 						</div>
 						<div class="form__block block-right">
@@ -391,7 +402,7 @@
 					</div>
 					<div class="footer__socials">
                         <ul class="social__list">
-                            <li class="list__el"><svg class="vk" viewBox="0 0 126 72" w><fecolormatrix type="saturate" values="0"   /><use xlink:href="./img/sprite.svg#vk"></use></svg></li>
+                            <li class="list__el"><svg class="vk" viewBox="0 0 126 72"><use xlink:href="./img/sprite.svg#vk"></use></svg></li>
                             <li class="list__el"><svg class="fb" viewBox="0 0 36.711 36.711"><use xlink:href="./img/sprite.svg#fb"></use></svg></li>
                             <li class="list__el"><svg class="tw" viewBox="0 0 37.453 31.21"><use xlink:href="./img/sprite.svg#tw"></use></svg></li>
                             <li class="list__el"><svg class="inst" viewBox="0 0 36.663 36.664"><use xlink:href="./img/sprite.svg#inst"></use></svg></li>

@@ -55,60 +55,15 @@
     display: flex;
     flex-direction: column;
     font-size: rem(13px);
+
     input{
-         margin-top: rem(7px);
+        margin-top: rem(7px);
         border:none;
-        }
-    &:nth-child(1){
-        width: 48%;
-            input{
-                height: rem(31px);
-                border-radius: rem(5px);
-            }
-    }
-    &:nth-child(2){
-        width: 48%;
-            input{
-                height: rem(31px);
-                border-radius: rem(5px);
-            }
-    }
-     &:nth-child(3){
-        width: 100%;
-            input{
-                 height: rem(31px);
-                border-radius: rem(5px);
-                }
-        }
-    &:nth-child(4){
-        width: 23%;
-            input{
-                height: rem(31px);
-                border-radius: rem(5px);
-                }
-        }
-    &:nth-child(5){
-        width: 23%;
-            input{
-                 height: rem(31px);
-                border-radius: rem(5px);
-                }
-    }
-    &:nth-child(6){
-        width: 23%;
-            input{
-                height: rem(31px);
-                border-radius: rem(5px);
-      }
-              }
-    &:nth-child(7){
-         width: 23%;
-             input{
-                 height: rem(31px);
-                 border-radius: rem(5px);
-        }
+        height: rem(31px);
+        border-radius: rem(5px);
     }
 }
+
 .block-right{
     width: 43.8%;
     display: flex;
@@ -270,4 +225,23 @@
             }
         }
     }
+}
+.left__first{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .block__el-left{
+        width: 48%;
+    }
+}
+.left__sec{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .block__el-left{
+        width: 23%;
+    }
+}
+.sec{
+    width: 100%;
 }

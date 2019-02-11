@@ -26,77 +26,75 @@
             height: 100vh;
             .squad__title{
                 color: #f9b43b;
-                font-family: 'Gagalin';
-                font-size: rem(72px);
-                font-weight: 400;
                 margin-bottom: rem(46px);
             }
-            .squad__subtitle{
-                line-height: rem(28.13px);
-                .squad__list{
-                    .active{
-                            height: 20%;
-                        }
-                    .list__el{
-                        &:hover{
-                            cursor: pointer;
-                        }
-                        h2{
-                            color: #ffffff;
-                            font-family: 'Gagalin';
-                            font-size : rem(14px);
-                            font-weight: 400;
-                            position: relative;
-                            @include phones(){
-                                font-size: 25px;
-                                font-weight: 400;
-                            }
-                            span{
-                                border: rem(4px) solid transparent;	
-                                border-top: rem(4px) solid #f9b43b;
-                                position: absolute;
-                                top: 40%;
-                                left: rem(-19px); 
-                                @include tablets(){
-                                    border: rem(10px) solid transparent;	
-                                    border-top: rem(10px) solid #f9b43b; 
-                                }
-                            }
-                        }
-                        .list__el-info{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 0;
-                            overflow: hidden;
-                            @include tablets(){
-                                flex-direction: column;
-                            }
-                            
-                            .info__text{
-                                color: #ffffff;
-                                font-family: 'Ubuntu', sans-serif;
-                                font-size: rem(13px);
-                                width: rem(207px);
-                                margin-left: rem(20px);
-                                @include tablets(){
-                                    width: 100%;
-                                    margin-left: 0;
-                                }
-                                &-title{
-                                    font-weight: 700;
-                                    margin-bottom: rem(5px);
-                                }
-                                &-subtitle{
-                                    font-weight: 300;
-                                    line-height: rem(24.01px);
-                                    font-size: rem(12px);
-                                }
-                            }
-                        }
-                    }
-                }
+        }
+    }
+}
+.squad__subtitle{
+    line-height: rem(28.13px);
+    .squad__list{
+        .active{
+                height: 20%;
             }
+    }
+}
+.info__img{
+    margin-right: rem(20px);
+}
+.info__text{
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: rem(13px);
+    width: rem(207px);
+    @include tablets(){
+        width: 100%;
+        margin-left: 0;
+    }
+    &-title{
+        font-weight: 700;
+        margin-bottom: rem(5px);
+    }
+    &-subtitle{
+        font-weight: 300;
+        line-height: rem(24.01px);
+        font-size: rem(12px);
+    }
+}
+.list__el{
+    &:hover{
+        cursor: pointer;
+    }
+    h2{
+        color: #ffffff;
+        font-family: 'Gagalin';
+        font-size : rem(14px);
+        font-weight: 400;
+        position: relative;
+        @include phones(){
+            font-size: 25px;
+            font-weight: 400;
+        }
+        span{
+            border: rem(4px) solid transparent;	
+            border-top: rem(4px) solid #f9b43b;
+            position: absolute;
+            top: 40%;
+            left: rem(-19px); 
+            @include tablets(){
+                border: rem(10px) solid transparent;	
+                border-top: rem(10px) solid #f9b43b; 
+            }
+        }
+    }
+    .list__el-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        @include tablets(){
+            flex-direction: column;
         }
     }
 }
