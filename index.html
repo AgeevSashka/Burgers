@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
 
     <title>Burgers</title>
   </head>
-  <body>
+  <body> 
     <div class="wrapper">
 		<section class="main section">
-			<div class="container">
+			<div class="main__wrap container">
 					<header class="header">
 							<div class="header__logo"><img src="img/main/logo.png" alt="#"></div>
-								<!-- /.header__logo -->
+								<!-- /.header__logo --> 
 								<nav class="navigation">
 									<ul class="navigation__list">
 										<li class="navigation__el"><a href="#">о нас</a></li>
@@ -30,15 +30,22 @@
 									</ul>
 								</nav>
 								<!-- /.navigation -->
-								<a href="#" class="navigation__button">заказать</a>
-								<!-- /.navigation__button -->
+								<div class="header__btn">
+									<button class="navigation__button">заказать</button>
+									<!-- /.navigation__button -->
+									<div class="burger">
+										<a href="#" class="menu-btn">
+										  <span></span>
+										</a>
+									</div>
+								</div>
 					</header>
 							<!-- /.header -->
 							<div class="greeting">
 								<div class="greeting__img"><img src="img/main/main-burger.png" alt="#"></div>
 								<!-- /.header__main -->
 								<div class="greeting__text">
-									<div class="greeting__text-title">мы делаем</div>
+									<div class="greeting__text-title title">мы делаем</div>
 									<!-- /.header__main-text__title -->
 									<div class="greeting__text-subtitle">натуральные <br>бургеры</div>
 									<!-- /.header__main-text__subtitle -->
@@ -49,9 +56,9 @@
 							<!-- /.header__arrow -->
 				</div>
 		</section>
-		<section class="info section">
+		<section class="info section" id="info">
 			<div class="info__wrap container">
-				<div class="info__title">Мы лучшие</div>
+				<div class="info__title title">Мы лучшие</div>
 				<!-- /.info__wrap-title -->
 			<ul class="info__subtitle subtitle">
 				<li class="subtitle__block">
@@ -93,6 +100,116 @@
 			</ul>
 		</div>
 		</section>
+		<section class="team section"> 
+			<div class="squad">
+				<div class="squad__wrap">
+					<div class="squad__title title">команда</div>
+					<!-- /.squad__title -->
+					<div class="squad__subtitle">
+						<ul class="squad__list">
+							<li class="list__el">
+								<h2><span></span>Дэниэл Редклиф</h2>
+								<div class="list__el-info" style="height: 20%;">
+									<div class="info__img">
+										<img src="img/team/aphex.png" alt="мужик">
+									</div>
+										<div class="info__text">
+											<div class="info__text-title">Оператор</div>
+											<!-- /.info__text-title -->
+											<div class="info__text-subtitle">
+												С радостью поможет подобрать идеальный бургер и оформить заказ.  
+												</div>
+											<!-- /.info__text-subtitle -->
+										</div>
+										<!-- /.info__text -->
+								</div>
+							</li>
+							<li class="list__el">
+								<h2><span></span>Ричард Джеймс</h2>
+								<div class="list__el-info">
+									<div class="info__img">
+										<img src="img/team/aphex.png" alt="мужик">
+									</div>
+										<div class="info__text">
+											<div class="info__text-title">Оператор</div>
+											<!-- /.info__text-title -->
+											<div class="info__text-subtitle">
+												С радостью поможет подобрать идеальный бургер и оформить заказ.  
+												</div>
+											<!-- /.info__text-subtitle -->
+										</div>
+										<!-- /.info__text -->
+								</div>
+							</li>
+							<li class="list__el active"> 
+								<h2><span></span>Джейк Финн</h2>
+								<div class="list__el-info">
+									<div class="info__img">
+										<img src="img/team/aphex.png" alt="мужик">
+									</div>
+										<div class="info__text">
+											<div class="info__text-title">Оператор</div>
+											<!-- /.info__text-title -->
+											<div class="info__text-subtitle">
+												С радостью поможет подобрать идеальный бургер и оформить заказ.  
+												</div>
+											<!-- /.info__text-subtitle -->
+										</div>
+										<!-- /.info__text -->
+								</div>
+							</li>
+							<li class="list__el">
+								<h2><span></span>Николай Иванов</h2>
+								<div class="list__el-info">
+									<div class="info__img">
+										<img src="img/team/aphex.png" alt="мужик">
+									</div>
+										<div class="info__text">
+											<div class="info__text-title">Оператор</div>
+											<!-- /.info__text-title -->
+											<div class="info__text-subtitle">
+												С радостью поможет подобрать идеальный бургер и оформить заказ.  
+												</div>
+											<!-- /.info__text-subtitle -->
+										</div>
+										<!-- /.info__text -->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- /.squad__subtitle -->
+				</div>
+			</div>
+		</section>
+        <section class="menu section">
+            <div class="menu__title title">Меню</div>
+            <ul class="menu-acco">
+                <li class="acco-item"> 
+                    <a href="" class="item__trigger"><span class="item__text">Для мясоедов</span></a>
+                    <div class="acco-content active">
+                        <div class="acco-content__text">
+                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                        </div>
+                    </div>
+                </li>
+                <li class="acco-item">
+                    <a href="" class="item__trigger"><span class="item__text">Вегитарианское</span></a>
+                    <div class="acco-content">
+                        <div class="acco-content__text">
+                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                        </div>
+                    </div>
+                </li>
+                <li class="acco-item">
+                    <a href="" class="item__trigger"><span class="item__text">Диетическое</span></a>
+                    <div class="acco-content">
+                        <div class="acco-content__text">
+                            Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
 		<section class="reviews section">
 			<div class="reviews__block">
 				<div class="reviews__text">
@@ -199,89 +316,101 @@
 			</div>
 			<!-- /.reviews__block -->
 		</section>
-		<section class="team section"> 
-			<div class="squad">
-				<div class="squad__wrap">
-					<div class="squad__title">команда</div>
-					<!-- /.squad__title -->
-					<div class="squad__subtitle">
-						<ul class="squad__list">
-							<li class="list__el">
-								<h2><span></span>Дэниэл Редклиф</h2>
-								<div class="list__el-info">
-									<div class="info__img">
-										<img src="/img/team/aphex.png" alt="мужик">
-									</div>
-										<div class="info__text">
-											<div class="info__text-title">Оператор</div>
-											<!-- /.info__text-title -->
-											<div class="info__text-subtitle">
-												С радостью поможет подобрать идеальный бургер и оформить заказ.  
-												</div>
-											<!-- /.info__text-subtitle -->
-										</div>
-										<!-- /.info__text -->
+	
+		<section class="section form">
+			<div class="container form__wrap">
+				<div class="form__title title">Закажите доставку</div>
+					<form action="POST" class="main-form">
+						<div class="form__block block-left">
+							<div class="left__first">
+								<div class="block__el-left">
+									<label for="name">Имя</label>
+									<input type="text" name="name" required>
 								</div>
-							</li>
-							<li class="list__el">
-								<h2><span></span>Ричард Джеймс</h2>
-								<div class="list__el-info">
-									<div class="info__img">
-										<img src="/img/team/aphex.png" alt="мужик">
-									</div>
-										<div class="info__text">
-											<div class="info__text-title">Оператор</div>
-											<!-- /.info__text-title -->
-											<div class="info__text-subtitle">
-												С радостью поможет подобрать идеальный бургер и оформить заказ.  
-												</div>
-											<!-- /.info__text-subtitle -->
-										</div>
-										<!-- /.info__text -->
+								<div class="block__el-left">
+									<label for="tel">Телефон</label>
+									<input type="tel" name="tel" required>
 								</div>
-							</li>
-							<li class="active"> 
-								<h2><span></span>Джейк Финн</h2>
-								<div class="list__el-info">
-									<div class="info__img">
-										<img src="/img/team/aphex.png" alt="мужик">
-									</div>
-										<div class="info__text">
-											<div class="info__text-title">Оператор</div>
-											<!-- /.info__text-title -->
-											<div class="info__text-subtitle">
-												С радостью поможет подобрать идеальный бургер и оформить заказ.  
-												</div>
-											<!-- /.info__text-subtitle -->
-										</div>
-										<!-- /.info__text -->
+							</div>
+							<div class="block__el-left sec">
+								<label for="square">Улица</label>
+								<input type="text" name="square" required>
+							</div>
+							<div class="left__sec">
+								<div class="block__el-left">
+									<label for="home">Дом</label >
+									<input type="text" name="home" required>
 								</div>
-							</li>
-							<li class="list__el">
-								<h2><span></span>Николай Иванов</h2>
-								<div class="list__el-info">
-									<div class="info__img">
-										<img src="/img/team/aphex.png" alt="мужик">
-									</div>
-										<div class="info__text">
-											<div class="info__text-title">Оператор</div>
-											<!-- /.info__text-title -->
-											<div class="info__text-subtitle">
-												С радостью поможет подобрать идеальный бургер и оформить заказ.  
-												</div>
-											<!-- /.info__text-subtitle -->
-										</div>
-										<!-- /.info__text -->
+								<div class="block__el-left">
+									<label for="housing">Корпус</label>
+									<input type="number" name="housing" required>
 								</div>
-							</li>
-						</ul>
-					</div>
-					<!-- /.squad__subtitle -->
-				</div>
+								<div class="block__el-left">
+									<label for="apartment">Квартира</label>
+									<input type="number" name="apartment" required>
+								</div>
+								<div class="block__el-left">
+									<label for="floor">Этаж</label>
+									<input type="number" name="floor" required>
+								</div>
+							</div>
+						</div>
+						<div class="form__block block-right">
+							<div class="block__el-right">
+								<label for="coment">Коментарий</label>
+								<input type="number" name="floor" required>
+							</div>
+							<div class="block__el-right">
+								<div>Потребуеться сдача</div>
+								<label>
+									<input type="radio" name="floor" required hidden checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="block__el-right">
+								<div>Оплата по карте</div>
+								<label>
+									<input type="radio" name="floor" required hidden checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="block__el-right">
+								<div>Не перезванивать</div>
+								<label>
+									<input type="checkbox" name="floor" required hidden checked>
+									<span></span>
+								</label>
+							</div>
+							<div class="block__el-right">
+								<input class="btn" type="submit" name="floor" required value="Заказать">
+							</div>
+							<div class="block__el-right">
+								<input type="reset" name="floor" required value="Очистить">
+							</div>
+						</div>
+					</form>
 			</div>
 		</section>
-	
 
+		<section class="section map">
+		    <div class="main__map"><img class="map-img" src="img/map/map__bg.png" alt=""></div>
+			<footer class="footer">
+				<div class="container footer__wrap">
+					<div class="footer__contacts">
+						<p>Санкт-Петербург, ул.Бабушкина, д.12/1, 15</p>
+						 <span><svg class="phone" viewBox="0 -4 18 18"><use xlink:href="./img/sprite.svg#phone"></use></svg> <a href="tel:88123771377">+7 (812) 377-13-77</a></span>
+					</div>
+					<div class="footer__socials">
+                        <ul class="social__list">
+                            <li class="list__el"><svg class="vk" viewBox="0 0 126 72"><use xlink:href="./img/sprite.svg#vk"></use></svg></li>
+                            <li class="list__el"><svg class="fb" viewBox="0 0 36.711 36.711"><use xlink:href="./img/sprite.svg#fb"></use></svg></li>
+                            <li class="list__el"><svg class="tw" viewBox="0 0 37.453 31.21"><use xlink:href="./img/sprite.svg#tw"></use></svg></li>
+                            <li class="list__el"><svg class="inst" viewBox="0 0 36.663 36.664"><use xlink:href="./img/sprite.svg#inst"></use></svg></li>
+                        </ul>
+					</div>	
+				</div>
+			</footer>
+		</section>
 
 
 		<div class="scroll">

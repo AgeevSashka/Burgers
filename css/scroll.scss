@@ -1,25 +1,28 @@
 .scroll{
 	position: fixed;
-	top: 96px;
-	right: 57px;
+	top: 10%;
+	right: 5%;
+	@include tablets(){
+		display: none;
+	}
 	.container{
 		width: 100%;
 		.scroll__menu{
 			padding: 0;
 				.scroll__el{
-					width: 6px;
-					height: 6px;
+					width: rem(6px);
+					height: rem(6px);
 					background-color: #fff;
-					margin-bottom: 15px;
+					margin-bottom: rem(15px);
 					border-radius:50%;
 					position: relative;
 					&:first-child:before{
 						content: '';
-						top: -4px;
-						right: -4px;
-						width: 12px;
-						height: 12px;
-						border: 1px solid #fff;
+						top: rem(-4px);
+						right: rem(-4px);
+						width: rem(12px);
+						height: rem(12px);
+						border: rem(1px) solid #fff;
 						border-radius: 50%;
 						display: block;
 						position: absolute;

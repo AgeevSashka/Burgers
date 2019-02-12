@@ -1,0 +1,104 @@
+.map{
+    position: relative;
+    .main__map{
+        height: 100vh;
+        width: 100vw;
+        .map-img{
+        height: 100vh;
+        width: 100vw;
+        }
+    }
+}
+.footer{
+    position: absolute;
+    background: url(../img/map/footer__bg.png);
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    .footer__wrap{
+        display: flex;
+        justify-content: space-between;
+        @include phones(){
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+.footer__contacts{
+    padding-top: rem(10px);
+    padding-bottom: rem(10px);
+    display: flex;
+    flex-direction: column;
+    @include phones(){
+        width: 100%;
+    }
+    p{
+        padding: 0;
+        margin: 0;
+        color: #ffffff;
+        font-family: 'Ubuntu';
+        font-size: rem(14px);
+        font-weight: 300;
+        margin-bottom: rem(10px);
+    }
+    span{
+        font-family: 'Ubuntu';
+        font-size: rem(14px);
+        font-weight: 700;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        align-items: center;
+        @include phones(){
+            width: 30%;
+            margin: 0 auto;
+        }
+        a{
+            color: #e45028;
+            text-decoration: none;
+        }
+        .phone{
+            fill:#e45028;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+.footer__socials{
+    display: flex;
+    @include phones(){
+        width: 100%;
+    }
+    .social__list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 14.5%;
+    padding: 0;
+    @include phones(){
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .list__el{
+        margin-right: 1.25rem;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+}
+.vk, .fb, .tw, .inst{
+    fill: #fff;
+    height: 30px;
+    width: 30px;
+    opacity: 0.3;
+    transition: all .6s;
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+}
