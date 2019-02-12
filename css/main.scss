@@ -4,7 +4,12 @@
 	background-size: cover;
 	height: 100vh;
 	margin: 0 auto;
-	.container{
+	.main__wrap{
+		display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 		.greeting{
 			display: flex;
 			margin: 0 auto;
@@ -65,13 +70,12 @@
 		}
 	
 		.main__arrow{
-				position: absolute;
-				bottom: 10%;
-				right: 50%;
+
 		}
 	}
 }
 .header{
+	width: 100%;
 	padding-top: rem(13px);
 	display: flex;
 	align-items: center;
@@ -81,7 +85,6 @@
 	}
 }
 .navigation{
-	flex-basis: 75%;
 	max-width: 800px;
 	margin-right: rem(10px);
 	@include tablets(){
@@ -92,6 +95,7 @@
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		align-items: center;
 	}
 }
 .navigation__button{
@@ -125,7 +129,8 @@
 		background-color: #fff;
 		display: inline-block;
 		vertical-align: middle;
-		margin-right: rem(12px);
+		margin-right: rem(6px);
+		margin-left: rem(6px);
 		
 		}
 	}
