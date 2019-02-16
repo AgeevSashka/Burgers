@@ -1592,11 +1592,19 @@ ul, ol, li, a, button {
   min-height: 470px;
   margin: 0 auto;
   width: 100%; }
+.slider-content__right {
+  margin-right: 15px;
+  width: 50%;}
+@media screen and (max-width: 768px) {
+    .slider-content__left {
+       width: 100%; } }
 
 .slider-content__left {
-  margin-right: 15px; }
+  margin-right: 15px;
+  width: 50%;}
   @media screen and (max-width: 768px) {
     .slider-content__left {
+       width: 100%;
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flex;
