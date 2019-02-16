@@ -393,7 +393,7 @@ ul, ol, li, a, button {
       justify-content: center;
       -webkit-box-align: center;
       -ms-flex-align: center;
-      align-items: center;
+         align-items: center;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
       @media screen and (max-width: 992px) {
@@ -441,6 +441,11 @@ ul, ol, li, a, button {
             padding: 0;
             text-align: center; } }
         .main .main__wrap .greeting .greeting__text-title {
+           .main .container .greeting .greeting__img {
+        margin-right: 12px; }
+      .main .container .greeting .greeting__text {
+        padding-top: 56px; }
+        .main .container .greeting .greeting__text-title {
           color: #f9b43b;
           margin-bottom: 1.33333rem; }
           @media screen and (max-width: 768px) {
