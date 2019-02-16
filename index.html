@@ -34,10 +34,21 @@
 									<button class="navigation__button">заказать</button>
 									<!-- /.navigation__button -->
 									<div class="burger">
-										<a href="#" class="menu-btn">
-										  <span></span>
-										</a>
-									</div>
+                                        <button class="nav-tgl">
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <nav class="nav">
+                                            <ul class="burger-nav">
+                                                <li class="navigation__el"><a href="#">о нас</a></li>
+                                                <li class="navigation__el"><a href="#">бургеры</a></li>
+                                                <li class="navigation__el"><a href="#">команда</a></li>
+                                                <li class="navigation__el"><a href="#">меню</a></li>
+                                                <li class="navigation__el"><a href="#">отзывы</a></li>
+                                                <li class="navigation__el"><a href="#">как мы работаем</a></li>
+                                                <li class="navigation__el"><a href="#">контакты</a></li>
+                                            </ul>
+                                        </nav>
+									  </div>
 								</div>
 					</header>
 							<!-- /.header -->
@@ -99,6 +110,75 @@
 				<!-- /.subtitle__block -->
 			</ul>
 		</div>
+		</section>
+		<section class="section section__slider">
+			<div class="slider__wrap">
+				<div class="arrow-left">
+					<img src="./img/slider/arrow-scroll-left.png" alt="">
+				</div>
+				<div class="main__slider">
+					<div class="slider-content__left">
+                        <div class="left-img left-img_first">
+                        <div class=" left-img__first">
+							<img src="./img/slider/burger.png" alt="">
+							<span>Состав</span>
+						</div>
+				            <ul class="composition">
+							    <li class="composition-list">
+							        <img src="./img/icons/beef.png" alt="">
+							        <span class="comp-title">Говядина</span>
+							        <span class="comp-price">300 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/buns.png" alt="">
+							        <span class="comp-title">Булочки</span>
+							        <span class="comp-price">100 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/salad.png" alt="">
+							        <span class="comp-title">Зелень</span>
+							        <span class="comp-price">70 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/sauce.png" alt="">
+							        <span class="comp-title">Соус</span>
+							        <span class="comp-price">150 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/cucumber.png" alt="">
+							        <span class="comp-title">Овощи</span>
+							        <span class="comp-price">200 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/cheese.png" alt="">
+							        <span class="comp-title">Сыр</span>
+							        <span class="comp-price">80 г</span>
+							    </li>
+							</ul>
+                        </div>
+						<div class="left-img left-img__big">
+							<img src="./img/slider/burger-1.png" alt="">
+						</div>
+						<div class="left-img left-img__sec">
+							<img src="./img/slider/kkal.png" alt="">
+							<span>ккал</span>
+						</div>
+					</div>
+					<div class="slider-content__right">
+						<div class="content-right__title title">Dark BEEF Burger</div>
+						<div class="content-right__subtitle">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+						<div class="content-right__price">
+							<div class="price-num">
+								500 <span class="price-num__small">рублей</span>
+							</div>
+							<button class="button slider__btn">заказать</button>
+						</div>
+					</div>
+				</div> 
+				<div class="arrow-right">
+					<img src="./img/slider/arrow-scroll-right.png" alt="">
+				</div>
+			</div>
 		</section>
 		<section class="team section"> 
 			<div class="squad">
@@ -429,5 +509,9 @@
 				</div>
 			</div>
 	</div>
+
+
+
+	<script src="js/script.js"></script>
   </body>
 </html>

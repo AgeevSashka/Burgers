@@ -6,6 +6,7 @@
 	justify-content: space-between;
 	&__logo{
 		margin-right: rem(20px);
+        z-index: 999;
 	}
 }
 .navigation{
@@ -42,6 +43,13 @@
 	letter-spacing: rem(0.4px);
 	list-style: none;
 	text-decoration: none;
+        @include tablets(){
+            flex-direction: column;
+            font-family: 'Ubuntu';
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
 	&:before{
 		&:first-child{
 			display: none;
@@ -59,94 +67,6 @@
 		}
 	}
 }
-.menu-btn {
-	display: none;
-	width: 50px;
-	height: 50px;
-	background-color: transparent;
-	position: relative;
-	@include tablets() {
-		display: inline-block;
-	}
-  }
-  .menu-btn span{
-	position: absolute;
-	top: 50%; 
-	left: 50%; margin-left: -15px;
-	width: 30px;
-	height: 4px;
-	background-color: #fff;
-  }
-  .menu-btn span::after {
-	position: absolute;
-	top: 50%; margin-top: 2px;
-	left: 50%; margin-left: -15px;
-	width: 30px;
-	height: 4px;
-	background-color: #fff;
-  }
-  .menu-btn span::before {
-	  position: absolute;
-	top: 50%; margin-top: -6px;
-	left: 50%; margin-left: -15px;
-	width: 30px;
-	height: 4px;
-	background-color: #fff;
-  }
-  .menu-btn span::before,
-  .menu-btn span::after {
-	content: '';
-	display: block;
-	transition: 0.2s;
-  }
-  .menu-btn span::before {
-	transform: translateY(-5px);
-  }
-  .menu-btn span::after {
-	transform: translateY(5px);
-  }
-  
-  .menu-btn_active span:before {
-	transform: rotate(-35deg);
-	width: 10px;
-	transform-origin: left bottom;
-  }
-  .menu-btn_active span:after {
-	transform: rotate(35deg);
-	width: 10px;
-	transform-origin: left top;
-  }
-  
-  .menu-block {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  .menu-nav {
-	background-color: #fff;
-	height: 50px;
-	
-  }
-  .menu-nav__link {
-	display: inline-block;
-	text-decoration: none;
-	color: #fff;
-	margin-right: 20px;
-  }
-  .menu-nav__link {
-	transition: 0.5s;
-	transform-origin: right center;
-	transform: translateX(50%);
-	opacity: 0;
-  }
-  .menu-nav__link_active {
-	transform: translateX(0%);
-	opacity: 1;
-  }
-  .header__btn{
-	  display: flex;
-	  align-items: center;
-  }
 .main{
 	min-height: rem(650px); 
 	background:url(../img/main/bg.png) center center no-repeat;
@@ -217,9 +137,126 @@
 				}
 			}
 		}
-	
 		.main__arrow{
-
 		}
 	}
+}
+.nav {
+	.burger-nav {
+    opacity: 0;
+    transition: all 1.5s;
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 3;
+    z-index: 99;
+    margin: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    top: 20%;
+        @include tablets(){
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+        }
+	}
+}
+.nav-tgl {
+  display: none;
+	justify-content: center;
+    position: relative;
+  z-index: 100;
+  width: 70px;
+  height: 70px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  line-height: 0.6;
+  text-align: center;
+    @include tablets() {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+	> span {
+		display: inline-block;
+		position: relative;
+		height: 4px;
+		width: 30px;
+		background: #fff;
+		vertical-align: middle;
+		&:before, &:after {
+		  display: inline-block;
+			position: absolute;
+			content: "";
+			height: 2px;
+			border-radius: 1px;
+			background: #fff;
+		}
+		&:before {
+		  top: -11px;
+			left: 0;
+			width: 30px;
+			height: 4px;
+		}
+		&:after {
+		  top: 11px;
+			left: 0;
+			width: 30px;
+			height: 4px;
+		}
+	}
+	
+	
+	&.toggled > span {
+		height: 0;
+		&:after, &:before {
+		  top: 0px;
+			left: 0;
+			width: 34px;
+		}
+		&:after {
+		  transform: rotate(-45deg);
+		}
+		&:before {
+			transform: rotate(45deg);
+		}
+	}
+}
+.nav:before {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: '';
+	z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2f3234;
+    opacity: 0.99;
+  transition: all 500ms ease-in-out;
+  clip-path: circle(30px at calc(100% - 65px) 65px);
+  visibility: hidden;
+}
+.active.nav:before {
+	visibility: visible;
+	clip-path: circle(100%);
+}
+.header__btn{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+}
+.burger-menu__active{
+    opacity: 1;
 }
