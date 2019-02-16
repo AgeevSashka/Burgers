@@ -9,8 +9,15 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
     margin: 0 auto;
     width: 100%;
 }
+.slider-content__right{
+    margin-right: 15px;
+    width: 50%;
+    @include tablets(){
+    }
+}
 .slider-content__left{
     margin-right: 15px;
+    width: 50%;
     @include tablets(){
         display: -webkit-flex;
         display: -moz-flex;
@@ -19,6 +26,7 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
         display: flex;
     }
 }
+.main__slider{
 .main__slider{
     display: flex;
     justify-content: center;
