@@ -13,6 +13,7 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
     margin-right: 15px;
     width: 50%;
     @include tablets(){
+       width: 100%;
     }
 }
 .slider-content__left{
