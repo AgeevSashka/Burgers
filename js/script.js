@@ -1,11 +1,22 @@
 //Меню Бургер
 
-var menu = document.querySelector('.menu-btn');
+var toggled = false;
+var nav = document.querySelector('.nav');
+const btn = document.querySelector('.nav-tgl');
 
-menu.addEventListener('click', function(e){
-  e.preventDefault();
-  this.classList.toggle('menu-btn_active');
-  
-  let nav = document.querySelector('.menu-nav');
-  nav.classList.toggle('menu-nav_active');
+btn.addEventListener('click', function(e){
+    let navBurg = document.querySelector('.burger-nav ');
+  if (!toggled) {
+        toggled = true;
+        e.target.classList.add('toggled');
+        nav.classList.add('active');
+      navBurg.style.opacity = 1;
+    } else {
+        toggled = false;
+        e.target.classList.remove('toggled');
+        nav.classList.remove('active');
+        navBurg.style.opacity = 0;
+  }
+
+    
 });

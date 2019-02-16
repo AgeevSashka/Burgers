@@ -34,22 +34,20 @@
 									<button class="navigation__button">заказать</button>
 									<!-- /.navigation__button -->
 									<div class="burger">
-										<div class="menu-block">
-										  <ul class="menu-nav">
-											<li><a href="#">о нас</a></li>
-											<li><a href="#">бургеры</a></li>
-											<li><a href="#">команда</a></li>
-											<li><a href="#">меню</a></li>
-											<li><a href="#">отзывы</a></li>
-											<li><a href="#">как мы работаем</a></li>
-											<li><a href="#">контакты</a></li>
-										  </ul>
-										  
-										  <a href="#" class="menu-btn">
-											<span></span>
-										  </a>
-										  
-										</div>
+                                        <button class="nav-tgl">
+                                            <span aria-hidden="true"></span>
+                                        </button>
+                                        <nav class="nav">
+                                            <ul class="burger-nav">
+                                                <li class="navigation__el"><a href="#">о нас</a></li>
+                                                <li class="navigation__el"><a href="#">бургеры</a></li>
+                                                <li class="navigation__el"><a href="#">команда</a></li>
+                                                <li class="navigation__el"><a href="#">меню</a></li>
+                                                <li class="navigation__el"><a href="#">отзывы</a></li>
+                                                <li class="navigation__el"><a href="#">как мы работаем</a></li>
+                                                <li class="navigation__el"><a href="#">контакты</a></li>
+                                            </ul>
+                                        </nav>
 									  </div>
 								</div>
 					</header>
@@ -120,10 +118,44 @@
 				</div>
 				<div class="main__slider">
 					<div class="slider-content__left">
-						<div class="left-img left-img__first">
+                        <div class="left-img left-img_first">
+                        <div class=" left-img__first">
 							<img src="./img/slider/burger.png" alt="">
 							<span>Состав</span>
 						</div>
+				            <ul class="composition">
+							    <li class="composition-list">
+							        <img src="./img/icons/beef.png" alt="">
+							        <span class="comp-title">Говядина</span>
+							        <span class="comp-price">300 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/buns.png" alt="">
+							        <span class="comp-title">Булочки</span>
+							        <span class="comp-price">100 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/salad.png" alt="">
+							        <span class="comp-title">Зелень</span>
+							        <span class="comp-price">70 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/sauce.png" alt="">
+							        <span class="comp-title">Соус</span>
+							        <span class="comp-price">150 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/cucumber.png" alt="">
+							        <span class="comp-title">Овощи</span>
+							        <span class="comp-price">200 г</span>
+							    </li>
+							    <li class="composition-list">
+							         <img src="./img/icons/cheese.png" alt="">
+							        <span class="comp-title">Сыр</span>
+							        <span class="comp-price">80 г</span>
+							    </li>
+							</ul>
+                        </div>
 						<div class="left-img left-img__big">
 							<img src="./img/slider/burger-1.png" alt="">
 						</div>

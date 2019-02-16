@@ -8,18 +8,20 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
     min-height: 470px;
     margin: 0 auto;
     width: 100%;
+    max-width: 1103px;
 }
 .slider-content__right{
     margin-right: 15px;
     width: 50%;
     @include tablets(){
-       width: 100%;
+        width: 100%;
     }
 }
 .slider-content__left{
     margin-right: 15px;
     width: 50%;
     @include tablets(){
+        width: 100%;
         display: -webkit-flex;
         display: -moz-flex;
         display: -ms-flex;
@@ -27,7 +29,6 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
         display: flex;
     }
 }
-.main__slider{
 .main__slider{
     display: flex;
     justify-content: center;
@@ -84,6 +85,15 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
         cursor: pointer;
     }
 }
+.left-img_first{
+    position: relative;
+    &:hover{
+        cursor: pointer;
+        .composition{
+            opacity: .9;
+        }
+    }
+}
 .left-img__first{
     width: 91px;
     height: 90px;
@@ -94,6 +104,10 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    &:hover{
+        cursor: pointer;
+        
+    }
     img{
         margin-bottom: 9px;
         width: 50%;
@@ -124,4 +138,33 @@ background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, 
         width: 100%;
     }
     
+}
+.composition{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 92px;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 66;
+    opacity: .9;
+    color: #2f3234;
+    font-family:'Ubuntu';
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0;
+    transition: all 1s;
+}
+.composition-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px 8px 20px;
+    img{
+        margin-right: 25px;
+    }
+    .comp-title{
+        margin-right: 64px;
+    }
 }
