@@ -158,11 +158,7 @@
     width: 100%;
     top: 20%;
         @include tablets(){
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flex;
-            display: -o-flex;
-            display: flex;
+					display: none;
         }
 	}
 }
@@ -258,5 +254,9 @@
     align-items: center;
 }
 .burger-menu__active{
-    opacity: 1;
+		opacity: 1;
+
+}
+.active	.burger-nav{
+	display: block;
 }

@@ -1,3 +1,13 @@
+//colors
+$orange: #e35028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e45028;
+
+//breakponts
+$desktop: 820px;
+$tablets: 768px;
+$phones: 480px;
 
 html{
 	@include tablets() {
@@ -48,8 +58,10 @@ html{
 	background-color: #e45028;
 	border-radius: rem(5px);
 	transition: all .6s;
+	outline: none;
 	&:hover{
 		cursor: pointer;
+		outline: none;
 		background-color: #c1401e;
 	}
 }

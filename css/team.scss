@@ -1,100 +1,157 @@
-
-.team{
-    min-height: rem(650px);
-    height: 100vh;
-    width: 100%;
-    background: url(../img/team/team-bg.png);
+.team {
+    background: url('../img/team/team-bg.png') center center no-repeat;
     background-size: cover;
     position: relative;
-    .squad{
-        position: absolute;
-        width: 49%;
-        background-color: #2f3234;
-        opacity: 0.93;
-        height: 100vh;
-        right: 0;
-        @include tablets(){
-            width: 100%;
-            text-align: center;
-        }
-        &__wrap{
-            width: rem(347px);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100vh;
-            .squad__title{
-                color: #f9b43b;
-                margin-bottom: rem(46px);
-            }
-        }
-    }
-}
-.squad__subtitle{
-    line-height: rem(28.13px);
-    .squad__list{
-        .active{
-                height: 20%;
-            }
-    }
-}
-.info__img{
-    margin-right: rem(20px);
-}
-.info__text{
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: rem(13px);
-    width: rem(207px);
-    @include tablets(){
+  
+    &__content {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      background: rgba(#2f3234, .93);
+      padding: 5% 4% 0 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      @include tablets {
+          padding: 0;
+        left: 0;
         width: 100%;
-        margin-left: 0;
-    }
-    &-title{
-        font-weight: 700;
-        margin-bottom: rem(5px);
-    }
-    &-subtitle{
-        font-weight: 300;
-        line-height: rem(24.01px);
-        font-size: rem(12px);
-    }
-}
-.list__el{
-    &:hover{
-        cursor: pointer;
-    }
-    h2{
-        color: #ffffff;
-        font-family: 'Gagalin';
-        font-size : rem(14px);
-        font-weight: 400;
-        position: relative;
-        @include phones(){
-            font-size: 25px;
-            font-weight: 400;
-        }
-        span{
-            border: rem(4px) solid transparent;	
-            border-top: rem(4px) solid #f9b43b;
-            position: absolute;
-            top: 40%;
-            left: rem(-19px); 
-            @include tablets(){
-                border: rem(10px) solid transparent;	
-                border-top: rem(10px) solid #f9b43b; 
-            }
-        }
-    }
-    .list__el-info{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        height: 0;
-        overflow: hidden;
-        @include tablets(){
-            flex-direction: column;
-        }
+        justify-content: center;
+      }
     }
-}
+  }
+  
+  .team__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        color: #f9b43b;
+    }
+  }
+  
+  .team-acco {
+    color: #fff;
+    font-size: .88rem;
+  
+    .item-name {
+      font-family: 'Gagalin';
+      font-size: 24px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+  
+    .item-name:before {
+      content: "";
+      display: inline-block;
+      border: .5rem solid transparent;
+      width: 0;
+      height: 0;
+      border-top-color: #f7b33b;
+      border-bottom-width: 0px;
+      border-left-width: .31rem;
+      border-right-width: .31rem;
+      margin-right: .63rem;
+      transition: transform .3s;
+    }
+  
+    .team-item__content {
+      font-family: 'Ubuntu', sans-serif;
+      display: flex;
+      margin-bottom: 1rem;
+      height: 0;
+      overflow: hidden;
+      transition: height .3s;
+  
+      @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  
+    .team-item__text {
+      width: 15rem;
+  
+      h3 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+  
+      p {
+        font-weight: 300;
+        line-height: 1.7;
+      }
+  
+      @include tablets {
+        width: 20.75rem;
+      }
+    }
+    
+    .team-item__image {
+      margin-right: 1.25rem;
+  
+      @include tablets {
+        margin-right: 0;
+      }
+  
+      @include phones {
+        margin-right: 0;
+      }
+    }
+    
+    .team-item__img {
+      width: 100px;
+      height: 100px;
+      background: center center no-repeat;
+      background-size: cover;
+      border-radius: 50%;
+    }
+  
+    @include tablets {
+      text-align: center;
+    }
+  }
+  
+  .acco-active {
+
+  
+    .item-name:before {
+      content: "";
+      display: inline-block;
+      margin-right: .63rem;
+      transform: rotate(180deg);
+      transition: .3s;
+    }
+  
+    .team-item__content {
+      height: 8.4rem;
+  
+      @include tablets {
+        height: 14.5rem;
+      }
+    }
+  
+    .accordeon__img {
+      @include tablets {
+        margin-bottom: 1.55rem;
+      }
+    }
+  
+    .accordeon__text {
+      @include tablets {
+        width: 21rem;
+      }
+    }
+  }
+  
+  
+  
+  
