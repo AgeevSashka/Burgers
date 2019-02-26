@@ -102,48 +102,63 @@ reviewsList.addEventListener('click', e => {
 });
 
 //Слайдер
-var leftArrow = document.querySelector('.arrow-left');
-var rightArrow = document.querySelector('.arrow-right');
-
-var slides = document.querySelectorAll('.main__slider-content .slide');
+const slides = document.querySelectorAll('.slider .slider__item');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
+var fade = setInterval(nextSlide, 1000);
 
-leftArrow.addEventListener('click', () =>{
-  slides[currentSlide].className = 'slide';
-  currentSlide = (currentSlide+1)%slides.length;
-  slides[currentSlide].className = 'slide showing';
-});
+function nextSlide() {
+  goToSlide(currentSlide+1);
+ }
+ 
+ function previousSlide() {
+  goToSlide(currentSlide-1);
+ }
+ 
+ function goToSlide(n) {
+  slides[currentSlide].className = 'slider__item';
+  currentSlide = (n+slides.length)%slides.length;
+  slides[currentSlide].className = 'slider__item slider-active';
+ }
 
-rightArrow.addEventListener('click', () =>{
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-});
-
-function nextSlide(){
-    slides[currentSlide].className = 'slide';
-    currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className = 'slide showing';
+var timer = false;
+ 
+function pauseSlideshow() {
+    timer = false;
+    clearInterval(fade);
+}
+ 
+function playSlideshow() {
+    timer = false;
 }
 
+const rightArrow = document.getElementById('next');
+const leftArrow = document.getElementById('prev');
+  
+  rightArrow.addEventListener('click', () =>{
+    pauseSlideshow();
+    previousSlide();
+  });
+  leftArrow.addEventListener('click', () =>{
+    pauseSlideshow();
+    previousSlide();
+  });
 
 // Форма с модалкой 
 
-const myForm = document.querySelector('#form');
-  const orderBtn = myForm.querySelector('.order__form-button');
-  const clearBtn = myForm.querySelector('.order__form-button-reset');
-  const formTrue = myForm.querySelector('.formoverlay-true');
-  const formErr = myForm.querySelector('.formoverlay-error');
-  const formtruecloseBtn = myForm.querySelector('.formtrue__close');
-  const formerrcloseBtn = myForm.querySelector('.formerr__close');
+const mainForm = document.querySelector('#form');
+  const orderBtn = mainForm.querySelector('.order__form-button');
+  const resetBtn = mainForm.querySelector('.order__form-button-reset');
+  const formTrue = mainForm.querySelector('.formoverlay-true');
+  const formFalse = mainForm.querySelector('.formoverlay-error');
+  const formtruecloseBtn = mainForm.querySelector('.formtrue__close');
+  const formFalsecloseBtn = mainForm.querySelector('.formFalse__close');
   
   orderBtn.addEventListener('click', e=> {
     event.preventDefault();
-    if (validateForm(myForm)) {
-        const name = myForm.elements.name.value;
-        const phone = myForm.elements.phone.value;
-        const comment = myForm.elements.comment.value;
+    if (validateForm(mainForm)) {
+        const name = mainForm.elements.name.value;
+        const phone = mainForm.elements.phone.value;
+        const comment = mainForm.elements.comment.value;
         const to = 'webdev@mail.ru';
         var formData = new FormData();
             formData.append('name', name);
@@ -159,7 +174,7 @@ const myForm = document.querySelector('#form');
                 if (xhr.response.status) {
                   formTrue.style.display = 'block';    
                 } else {
-                  formErr.style.display = 'block';
+                  formFalse.style.display = 'block';
                 }
 
                 formtruecloseBtn.addEventListener('click', function() {
@@ -180,21 +195,21 @@ const myForm = document.querySelector('#form');
                   }
                 })
 
-                formerrcloseBtn.addEventListener('click', function() {
+                formFalsecloseBtn.addEventListener('click', function() {
                   event.preventDefault();
-                  formErr.style.display = 'none';
+                  formFalse.style.display = 'none';
                 })
 
-                formErr.addEventListener('click', function() {
+                formFalse.addEventListener('click', function() {
                   event.preventDefault();
-                  formErr.style.display = 'none';
+                  formFalse.style.display = 'none';
                 })
                 
                 document.addEventListener('keyup', e => {
                   let keyName = e.keyCode;
                 
                   if (keyName === 27) {
-                    formErr.style.display = 'none';
+                    formFalse.style.display = 'none';
                   }
                 })
                 
@@ -202,26 +217,26 @@ const myForm = document.querySelector('#form');
     }
 })
 
-function validateForm(myForm) {
+function validateForm(mainForm) {
   let valid = true;
   
-  if (!validateField(myForm.elements.name)) {
+  if (!validateField(mainForm.elements.name)) {
       valid = false;
   }
 
-  if (!validateField(myForm.elements.phone)) {
+  if (!validateField(mainForm.elements.phone)) {
       valid = false;
   }
 
-  if (!validateField(myForm.elements.comment)) {
+  if (!validateField(mainForm.elements.comment)) {
       valid = false;
   }
 
-  if (!validateField(myForm.elements.street)) {
+  if (!validateField(mainForm.elements.street)) {
     valid = false;
   }
 
-  if (!validateField(myForm.elements.home)) {
+  if (!validateField(mainForm.elements.home)) {
     valid = false;
   }
 
