@@ -101,7 +101,7 @@
 		font-weight: 300;
 		line-height: rem(24px);
 		margin-top: rem(30px);
-		@include phones(){
+		@include tablets(){
 			display: none;
 		}
 	}
