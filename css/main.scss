@@ -26,6 +26,9 @@
 .navigation__button{
 	@include button();
 	font-size: 13px;
+	@include tablets() {
+		margin-right: 60px;
+	}
 }
 .navigation__el{
 	list-style: none;
@@ -84,12 +87,11 @@
 			margin: 0 auto;
 			justify-content: center;
 			align-items: center;
-            flex-wrap: wrap;
-            @include notes(){
-				flex-direction: column;
-                align-items: center;
-                text-align: center;
-                margin: 0;
+      flex-wrap: wrap;
+      @include notes(){
+				align-items: center;
+				text-align: center;
+				margin: 0;
 			}
             
 			@include tablets(){
@@ -99,11 +101,15 @@
 			}
 			.greeting__img{
 				margin-right: rem(12px);
+				width: 45%;
+				@include tablets(){
+					width: 90%;
+			}
 				img{
 					width: 100%;
-                    @include tablets(){
-                        width: 80%;
-                    }
+					@include tablets(){
+							width: 80%;
+					}
 				}		
 			}
 			.greeting__text{
@@ -120,7 +126,7 @@
 				&-title{
 						color: #f9b43b;
 						margin-bottom: rem(20px);
-                        @include tablets(){
+                @include notes(){
 					        font-size: rem(62px);
 				        }
 				}
@@ -131,7 +137,7 @@
 						font-weight: 500;
 						letter-spacing: rem(-1.63px);
 						line-height: rem(60px);
-                        @include tablets(){
+                @include notes(){
 					        font-size: rem(50px);
 				        }
 				}
@@ -156,10 +162,7 @@
     left: 0;
     padding: 0;
     width: 100%;
-    top: 20%;
-        @include tablets(){
-					display: none;
-        }
+    top: 1;
 	}
 }
 .nav-tgl {
@@ -234,16 +237,19 @@
   content: '';
 	z-index: 99;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: #2f3234;
     opacity: 0.99;
   transition: all 500ms ease-in-out;
   clip-path: circle(30px at calc(100% - 65px) 65px);
   visibility: hidden;
 }
-.active.nav:before {
+.burger-active.nav:before {
 	visibility: visible;
 	clip-path: circle(100%);
+}
+.burger-active .burger-nav{
+	display: flex;
 }
 .header__btn{
     display: -webkit-flex;
@@ -254,9 +260,5 @@
     align-items: center;
 }
 .burger-menu__active{
-		opacity: 1;
-
-}
-.active	.burger-nav{
-	display: block;
+    opacity: 1;
 }

@@ -1,19 +1,21 @@
-.main-form {
+.order {
     background: url("../img/form/form-bg.png") center center no-repeat;
     background-size: cover;
+    position: relative;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    .container{
-        height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    .order__wrap{
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
     }
   }
-  
-  .order {
+  .order__title{
+    color: #f9b43b;
+    margin-bottom: 30px;
+  }
+  .order__form {
     display: flex;
     justify-content: center;
   
@@ -23,16 +25,13 @@
         justify-content: center;
     }
   }
-  .section__title{
-    margin-bottom: 1.88rem;
-    color: #f9b43b;
-  }
-  .order__form {
+  
+  .order-block {
     width: 45%;
     display: flex;
     flex-direction: column;
   
-    &-left {
+    &_left {
       margin-right: 3%;
   
       @include tablets {
@@ -53,13 +52,13 @@
     }
   }
   
-  .order__form-row {
+  .order-el {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: row;
   }
   
-  .order__form-row:nth-child(3) {
+  .order-el:nth-child(3) {
     margin-bottom: 0;
   }
   
@@ -68,13 +67,12 @@
     font-weight: 300;
     color:#fff;
     font-size: .88rem;
-    font-family: 'ubuntu';
   }
   
   .order__form-input {
     font-size: .88rem;
     height: 25px;
-    border: none;
+    border: 1px solid #d1cfcb;
     border-radius: .31rem;
     width: 100%;
   }
@@ -93,15 +91,15 @@
   }
   }
   
-  .order__form-row {
+  .order-el {
     display: flex;
   
-    @include phones{
+    @include tablets(){
         justify-content: center;
     }
   }
   
-  .form-input_textarea {
+  .order__form-input_textarea {
     height: 6.2rem;
     resize: none;
   }
@@ -125,7 +123,7 @@
     visibility: hidden;
   }
   
-  .order__radio-el {
+  .order__radio-fake {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
@@ -169,12 +167,10 @@
     color:#fff;
     margin-left: .63rem;
     font-weight: 300;
-    font-family: 'ubuntu';
   }
   
   .order__radio_checkbox {
     .order__radio-fake {
-        font-family: 'ubuntu';
         border-radius: 0px;
         display: flex;
         justify-content: center;
@@ -195,27 +191,28 @@
         display: inline-flex;
       } 
     }
-  } 
+  }
   
-  .order__form-btns {
+  .order__form-buttons {
     display:flex;
     flex-direction:column;
     flex-wrap: wrap;
   }
   
-  .order__form-button {
+  .order__btn {
     margin-right: 3%;
     cursor: pointer;
     @include button();
+    height: 35px;
   }
   
-  .order__form-button-reset {
-    font-family: 'Ubuntu';
+  .order__reset {
     padding-left: 0;
     padding-right: 0;
     margin-right: 0;
-    cursor: pointer;
     @include button();
+    height: 35px;
+    cursor: pointer;
     text-transform: none;
     background: transparent;
     &:hover {
@@ -269,7 +266,7 @@
   .formoverlay-true, .formoverlay-error {
     display: flex;
     background: rgba(47, 50, 52, .99);
-    position: fixed;
+    position: absolute;
     height: 100vh;
     width: 100vw;
     top:0;
@@ -286,7 +283,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -320,5 +317,11 @@
    
     &:focus {
       outline: none;
+    }
+  }
+  .order-btns{
+    @include tablets() {
+      display: flex;
+      justify-content: center;
     }
   }

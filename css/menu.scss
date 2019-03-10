@@ -24,7 +24,9 @@
   margin: 0;
   padding: 0;
 }
-
+.menu-accordeon__close{
+  display: none;
+}
 .menu-accordeon__item {
   height: 100%;
   background-repeat: no-repeat;
@@ -58,14 +60,17 @@
           position: relative;
           @include phones () {
               .menu-accordeon__close {
-                  position: absolute;
-                  right: rem(30px);
-                  top: rem(15px);
-                  width: rem(20px);
-                  height: rem(20px);
-                  z-index: 5;
-                  font-size: 35px;
-                  opacity: 0.4;
+                display: block;
+                position: absolute;
+                right: 3rem;
+                top: 0rem;
+                width: 1.33333rem;
+                height: 1.33333rem;
+                z-index: 5;
+                font-size: 35px;
+                opacity: 0.4;
+                color: #f4f4f4;
+                opacity: .2;
               }
           }
       }
