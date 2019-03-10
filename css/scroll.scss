@@ -1,33 +1,47 @@
-.scroll{
+.fixed-menu {
 	position: fixed;
-	top: 10%;
-	right: 5%;
-	@include tablets(){
-		display: none;
-	}
-	.container{
-		width: 100%;
-		.scroll__menu{
-			padding: 0;
-				.scroll__el{
-					width: rem(6px);
-					height: rem(6px);
-					background-color: #fff;
-					margin-bottom: rem(15px);
-					border-radius:50%;
-					position: relative;
-					&:first-child:before{
-						content: '';
-						top: rem(-4px);
-						right: rem(-4px);
-						width: rem(12px);
-						height: rem(12px);
-						border: rem(1px) solid #fff;
-						border-radius: 50%;
-						display: block;
-						position: absolute;
-				}
-			}
+	top: 12%;
+	right: 3%;
+	z-index: 100; 
+	@include tablets {
+			display: none;
 		}
+}
+
+  
+.fixed-menu__item {
+	display: block;
+	margin-bottom: .31rem;
+	padding: .31rem;
+	height: 4px;
+	width: 4px;
+	position: relative;
+	border: 1px solid transparent;
+	border-radius: 50%; 
+	&:hover {
+	  border-color: #fff;
+		cursor: pointer; 
+	}
+	&:after {
+	  content: "";
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	  width: .38rem;
+	  height: .38rem;
+	  border-radius: 50%;
+		background: #fff; 
 	}
 }
+
+	.fixed-menu__item_active {
+		border-color: #fff; 
+	}
+	.burger{
+		position: fixed;
+    top: 1.5%;
+    right: 5%;
+	}

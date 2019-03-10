@@ -1,97 +1,123 @@
-.menu{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    justify-content: flex-end;
-    background: url(../img/menu/menu-bg.png) center center no-repeat;
-    background-size: cover;
+.menu {
+  background: url('../img/menu/menu-bg.png') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
 }
-.menu-acco{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    z-index: 2;
+
+.title__menu {
+  color: #ffffff; 
+  font-weight: 400;
+  margin: 0;
 }
-.menu__title{
-    color: #ffffff;
-    z-index: 0;
-    font-weight: 400;
-    position: absolute;
-    top:10%;
-    left: 10%;
+
+.section__title-menu {
+  position: absolute;
+  top: 11%;
+  left: 7%;
 }
-.acco-item{
-    height: 100%;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+
+.menu-accordeon__list {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
-.item__trigger{
-    width: 80px;
-    display: block;
-    height: 100%;
-    text-decoration: none;
-    position: relative;
-    font-family: 'Gagalin';
-    font-size: 2.66667rem;
-    font-weight: 400;
-    &:nth-child(1){
-        background: url(../img/menu/menu-sec.png) center center no-repeat;
-        background-size: cover;
-    }
-    &:nth-child(2){
-        background: url(../img/menu/menu-first.png) center center no-repeat;
-        background-size: cover; 
-    }
-    &:nth-child(3){
-        background: url(../img/menu/menu-thrid.png) center center no-repeat;
-        background-size: cover; 
-    }
-    &:after{
-    content: '';
-    width: 80px;
-    display: block;
-    height: 100%;
-    background: rgba(#2f3234, .7);
-    }
+.menu-accordeon__close{
+  display: none;
 }
-.item__text{
-        font-size: 40px;
-        color: #ffffff;
-        text-align: center;
-        position: absolute;
-        left: 50%;
-        top:95%;
-        white-space:nowrap;
-        transform: rotate(-90deg) translateY(-50%);
-        transform-origin: 0 0;
+.menu-accordeon__item {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  @include phones () {
+      display: flex;
+  }
+  &-active {
+    @include phones () {
+      position: absolute;
+      z-index: 9;
+      left: 0;
     }
-.acco-content{
-    height: 100%;
-    width: 0;
-    overflow: hidden;
-    background: rgba(#2f3234, .9);
-        .acco-content__text{
-        color: #ffffff;
-        font-family: 'Ubuntu';
-        font-size: 0.93333rem;
-        font-weight: 300;
-        line-height: 1.6rem;
-        padding: 60px 30px;
-        display: block;
-    }
+      .menu-accordeon__text {
+          display: block;
+      }
+      width: 50%;
+      @include tablets () {
+          width: 60%;
+      }
+      @include phones () {
+        width: 100%;
+      }
+      .menu-accordeon__trigger-text {
+          color: $yellow;
+      }
+      .menu-accordeon__content {
+          width: 100%;
+          position: relative;
+          @include phones () {
+              .menu-accordeon__close {
+                display: block;
+                position: absolute;
+                right: 3rem;
+                top: 0rem;
+                width: 1.33333rem;
+                height: 1.33333rem;
+                z-index: 5;
+                font-size: 35px;
+                opacity: 0.4;
+                color: #f4f4f4;
+                opacity: .2;
+              }
+          }
+      }
+  }
 }
-.active{
-    max-width: 460px; 
-    width: 100%;
+
+.menu-accordeon__trigger {
+  width: rem(80px);
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+  background: center center / cover no-repeat;
+  background-color: rgba(20, 20, 20, 0.7);
+}
+
+.menu-accordeon__trigger-text {
+  color: #fff;
+  font-family: 'Gagalin';
+  font-size: rem(40px);
+  font-weight: 400;
+  line-height: 1.57;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  white-space: nowrap;
+  transform: rotate(-90deg) translatey(-50%);
+  transform-origin: 0 0;
+  margin-top: rem(-40px);
+}
+
+.menu-accordeon__content {
+  height: 100%;
+  background-color: #2f3234;
+  opacity: 0.93;
+  width: 0;
+  overflow: hidden;
+  transition: width .6s;
+}
+
+.menu-accordeon__text {
+  color: #fff;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  font-weight: 300;
+  line-height: 1.7;
+  padding: rem(60px) rem(30px);
+  display: none;
 }
